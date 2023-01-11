@@ -1,0 +1,102 @@
+.certificate-slider-pagination {
+  &.swiper-pagination-bullets {
+    position: relative !important;
+    .swiper-pagination-bullet {
+      background: rgba(0, 0, 34, 0.25) !important;
+      margin-right: 5px;
+      width: 6px;
+      height: 6px;
+    }
+    .swiper-pagination-bullet-active {
+      background: rgba(0, 0, 34, 0.28);
+      width: 6px;
+      height: 6px;
+    }
+  }
+}
+
+.hero-slider {
+  height: 350px;
+  margin-top: 75px;
+  .hero-slider-pagination {
+    position: absolute !important;
+    top: 15% !important;
+    .swiper-pagination-bullet {
+      width: 11px;
+      height: 11px;
+      margin: 9px 0 !important;
+      color: rgba(0, 0, 34, 0.08);
+      background: rgba(0, 0, 34, 0.4);
+
+    }
+    .swiper-pagination-bullet-active {
+      background: #c1c1c1;
+    }
+  }
+  @media (max-width: 1365px) {
+    margin-top: 30px;
+    height: 450px;
+  }
+  @media (max-width: 1365px) {
+    .hero-slider-pagination {
+      top: 10% !important;
+    }
+  }
+}
+
+.marketing-slider-outer {
+  .swiper-button-prev,
+  .swiper-button-next {
+    height: 38px;
+    width: 38px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-color: rgba(00, 00, 22, 0.5);
+    top: 47% !important;
+    background-size: 10px 15px;
+    color: #fff;
+    z-index: 2;
+  }
+  .swiper-button-next {
+    right: -8px;
+    //background-image: url("../static/images/LandingPage/slide_arrow_right.svg");
+  }
+  .swiper-button-prev {
+    left: -8px;
+    //background-image: url("../static/images/LandingPage/slide_arrow_left.svg");
+  }
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    background-color: rgba(00, 00, 22, 1);
+  }
+  .marketing-slider {
+    height: 230px;
+    .image-background {
+      transition: 0.3s;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .swiper-pagination {
+      bottom: -10px;
+      .swiper-pagination-bullet {
+        width: 11px;
+        height: 11px;
+        color: rgba(0, 0, 34, 0.08);
+        background: rgba(0, 0, 34, 0.4);
+      }
+      .swiper-pagination-bullet-active {
+        background: #c1c1c1;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .swiper-button-next {
+    display: none !important;
+  }
+  .swiper-button-prev {
+    display: none !important;
+  }
+}

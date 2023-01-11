@@ -1,0 +1,32 @@
+.return-to-back {
+  .arrow-left-icon {
+    svg g path {
+      stroke: var(--v-darkest-base) !important;
+    }
+  }
+  &:hover {
+    .arrow-left-icon {
+      svg g path {
+        stroke: var(--v-primary-base) !important;
+      }
+    }
+  }
+}
+.about-us-info {
+  .start-logo {
+    svg g path {
+      stroke: rgba(220, 220, 220, 0.02) !important;
+    }
+  }
+}
+.white-icon {
+  svg g path {
+    stroke: var(--v-white-base) !important;
+  }
+}
+
+.black-icon {
+  svg path {
+    stroke: #000000!important;
+  }
+}

@@ -1,0 +1,77 @@
+.custom-table-input {
+  border: 1px solid #0000002e;
+  font-size: 14px;
+  border-radius: 8px;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+  .v-input__prepend-outer {
+    margin-left: 0 !important;
+    height: 100% !important;
+  }
+}
+
+.custom-search {
+  width: 323px;
+
+  input::placeholder {
+    font-size: 12px;
+  }
+}
+
+.custom-form-control {
+  &.v-text-field {
+    .v-input__slot {
+      border: 1px solid rgba(0, 0, 0, 0.18) !important;
+      border-radius: 8px !important;
+    }
+    & > .v-input__control > .v-input__slot:before,
+    & > .v-input__control > .v-input__slot:after {
+      border-width: 0 !important;
+    }
+    &.v-input--is-label-active {
+      .v-label--active {
+        color: var(--v-darker-base) !important;
+      }
+    }
+    & .v-label {
+      font-size: 14px;
+      color: var(--v-darker-base);
+    }
+  }
+  &:hover {
+    .v-input__slot {
+      border: 1px solid rgba(0, 0, 0, 0.2) !important;
+      background-color: rgba(0, 0, 0, 0.04) !important;
+      border-radius: 8px !important;
+    }
+  }
+  &.v-input--is-focused {
+    .v-input__slot {
+      border: 1px solid var(--v-primary-base) !important;
+      border-radius: 8px !important;
+    }
+  }
+  &.custom-captcha-input {
+    .v-input__slot {
+      min-height: 25px;
+      height: 25px;
+      width: 45px;
+      border-radius: 4px !important;
+    }
+    input {
+      text-align: center;
+    }
+  }
+}
+
+.promotion-card-textarea {
+  .v-input__slot {
+    border: 1px solid #00000014 !important;
+    border-radius: 8px !important;
+  }
+  .v-text-field__slot::placeholder {
+    font-size: 12px !important;
+    color: #999999 !important;
+  }
+}

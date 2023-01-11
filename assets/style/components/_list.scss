@@ -1,0 +1,11 @@
+.custom-list-item {
+  min-height: unset !important;
+  .custom-item-title {
+    color: #cccccc;
+    font-size: 14px;
+    transition: all 0.5s;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}

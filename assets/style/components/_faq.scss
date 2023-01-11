@@ -1,0 +1,34 @@
+.hero-faq {
+  .v-text-field {
+    border: 1px solid #0000002e;
+    border-radius: 8px;
+    .v-input__append-inner {
+      .v-input__icon {
+        .v-icon {
+          color: var(--v-black-base) !important;
+          font-size: 20px;
+        }
+      }
+    }
+    .v-input__prepend-inner {
+      .v-input__icon {
+        height: 48px;
+        margin-left: 5px;
+        .v-icon {
+          color: var(--v-black-base);
+        }
+      }
+    }
+  }
+  .v-input--is-focused {
+    border: 1px solid var(--v-primary-base);
+    border-radius: 8px;
+    .v-input__prepend-inner {
+      .v-input__icon {
+        .v-icon {
+          color: var(--v-primary-base) !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+.to-left-0 {
+  right: initial !important;
+  left: 0 !important;
+}.to-left-5 {
+   right: initial !important;
+   left: 5px !important;
+ }
+
+.to-left-47 {
+  right: initial !important;
+  left: 47px !important;
+}
+.to-left-52 {
+  right: initial !important;
+  left: 52px !important;
+}
+.to-right-0 {
+  left: initial !important;
+  right: 0 !important;
+}
+.to-right-10-percent {
+  left: initial !important;
+  right: 10% !important;
+}
+.to-right-40 {
+  left: initial !important;
+  right: -40px !important;
+}
+.to-left-26-percent {
+  right: initial !important;
+  left: 26% !important;
+}
+.to-left-25-percent {
+  right: initial !important;
+  left: 25% !important;
+}
+.to-right-95-percent {
+  left: initial !important;
+  right: 95% !important;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg) !important;
+}
+.to-right-100 {
+  left: initial !important;
+  right: -100px !important;
+}
+.to-right-m180 {
+  left: initial !important;
+  right: -180px !important;
+}
+.to-left-70 {
+  right: initial !important;
+  left: 70px !important;
+}
+.to-left-192 {
+  right: initial !important;
+  left: 192px !important;
+}
+.box-border-right {
+  border-left: none !important;
+  border-right: 1px solid #eaeaea !important;
+}
+
+//.rtl {
+//    * {
+//        direction: rtl;
+//        text-align: right;
+//    }
+//
+//    .ml-auto,
+//    .mx-auto {
+//        margin-left: initial !important;
+//        margin-right: auto !important;
+//    }
+//}
+//
+//.ltr {
+//    * {
+//        direction: ltr !important;
+//        text-align: left !important;
+//    }
+//
+//    .ml-auto,
+//    .mx-auto {
+//        margin-left: initial !important;
+//        margin-right: auto !important;
+//    }
+//}

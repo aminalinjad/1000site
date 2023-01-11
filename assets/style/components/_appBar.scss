@@ -1,0 +1,28 @@
+.custom-app-bar {
+  .v-toolbar__content {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .v-toolbar__content {
+    border-bottom: 2px solid #f3f5f9;
+    background-color: rgba(255, 255, 255, 1) !important;
+  }
+}
+
+.custom-market-landing-app-bar {
+  .v-toolbar__content {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .v-toolbar__content {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05) !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .custom-app-bar {
+    .v-toolbar__content {
+      height: auto !important;
+    }
+  }
+}

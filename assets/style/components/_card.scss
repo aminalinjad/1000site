@@ -1,0 +1,10 @@
+.custom-table-card {
+  box-shadow: 0 0 20px #00000014 !important;
+  border-radius: 20px !important;
+  border-bottom: 1px solid #000;
+  .v-input--is-focused {
+    .v-select__selection {
+      color: var(--v-primary-base);
+    }
+  }
+}
