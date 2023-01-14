@@ -1,0 +1,17 @@
+.v-breadcrumbs {
+  &__item {
+    color: var(--v-grayScale3-base)!important;
+    font-family: Poppinsmedium, "Roboto", sans-serif !important;
+  }
+
+  &__item--disabled {
+    color: var(--v-grayScale2-base) !important;
+  }
+
+  &__divider {
+    i {
+      color: var(--v-grayScale3-base)!important;
+    }
+    padding-inline: 2px!important;
+  }
+}

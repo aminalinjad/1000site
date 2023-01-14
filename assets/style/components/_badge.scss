@@ -1,0 +1,13 @@
+.custom-list-item{
+  .v-badge{
+    line-height: 1.5;
+    .v-badge__wrapper{
+      margin-bottom: auto !important;
+      margin-right: 12px !important;
+      .v-badge__badge{
+        max-width: 6px;
+        max-height: 6px;
+      }
+    }
+  }
+}

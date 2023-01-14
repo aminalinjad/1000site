@@ -1,0 +1,41 @@
+.v-picker {
+  max-width: min-content!important;
+  &__body {
+    background: var(--v-grayScale7-base)!important;
+    font-size: 14px!important;
+
+    .v-date-picker-header {
+
+      button {
+        color: var(--v-grayScale1-base)!important;
+      }
+
+    }
+
+    .v-date-picker-table {
+      table {
+        border-bottom: 1px solid var(--v-grayScale4-base)!important;
+        padding-bottom: 14px;
+      }
+
+      th {
+        font-size: 14px!important;
+        color: var(--v-grayScale2-base)!important;
+      }
+
+      td {
+        .v-btn {
+          font-size: 14px!important;
+          border-radius: 8px;
+          border-width: 1.5px !important;
+          color: var(--v-grayScale1-base);
+        }
+      }
+    }
+
+
+  }
+  &__actions {
+    background: var(--v-grayScale7-base)!important;
+  }
+}

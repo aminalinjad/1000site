@@ -17,7 +17,7 @@ export default {
   },
 
   css: [
-    {src: '~/assets/style/style.scss', rel: "preload"}
+    {src: '~/assets/style/main.scss', rel: "preload"}
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -55,10 +55,9 @@ export default {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
+    customVariables: ['~/assets/style/variables.scss'],
     treeShake: true,
-    optionsPath: "./vuetify.option.js",
-    defaultAssets: false
+    optionsPath: "./vuetify.option.js"
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
