@@ -4,27 +4,15 @@
     app
     left
     width="100%"
-    class="drawer-search grayScale8"
+    class="drawer-search gray1"
   >
     <v-row class="ma-0">
       <v-col cols="12" class="px-4 pt-6">
         <v-icon size="24" class="ml-auto d-flex" @click="closeSearchDrawer"
-        >$CloseIcon</v-icon
+        >mdi-close</v-icon
         >
       </v-col>
       <!-- After implementing the backend, we can use graph permission  -->
-      <v-col v-if="graphPermission" cols="12" class="pb-1">
-        <v-tabs
-          v-model="selectTabSearch"
-          color="primary"
-          background-color="transparent"
-          class="tab-search"
-          centered
-        >
-          <v-tab class="text-capitalize font-regular-14">Explore</v-tab>
-          <v-tab class="text-capitalize font-regular-14">Graph</v-tab>
-        </v-tabs>
-      </v-col>
       <v-col>
         <v-form @submit.prevent="search">
           <v-row align="center" class="mb-2">
@@ -35,9 +23,9 @@
                 flat
                 outlined
                 hide-details
-                background-color="grayScale7"
+                background-color="secondPrimary"
                 height="56"
-                color="primary"
+                color="secondPrimary"
                 class="border-radius-12 search-input"
                 dense
               >

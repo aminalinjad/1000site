@@ -13,12 +13,11 @@
             class="fill-height"
           >
             <nuxt-link to="">
-              logo
-              <!--            <img-->
-              <!--              src="@/assets/images/logo.svg"-->
-              <!--              alt="chainitix-logo"-->
-              <!--              :width="$vuetify.breakpoint.mdAndUp?180:107"-->
-              <!--            />-->
+              <img
+                src="@/static/image/logo.svg"
+                alt="logo"
+                :width="$vuetify.breakpoint.mdAndUp?180:107"
+              />
             </nuxt-link>
           </v-row>
         </v-col>
@@ -28,14 +27,9 @@
           md="4"
           :class="{'text-center':$vuetify.breakpoint.xsOnly}"
         >
-          <v-row align="center" class="fill-height grayScale2--text">
-            <!--          <v-col cols="12"  sm="auto" class="pb-0 pb-sm-3 pe-md-10 pe-lg-16">-->
-            <!--            <p v-for='(item, index) in footerList' :key='index'>-->
-            <!--              <nuxt-link to='' class='font-medium-14'>{{ item }}</nuxt-link>-->
-            <!--            </p>-->
-            <!--          </v-col>-->
+          <v-row align="center" class="fill-height gray2--text">
             <v-col cols="12" sm="auto" class="pt-0 pt-sm-3">
-              <p v-for="(item, index) in footerList2" :key="index">
+              <p  v-for="(item, index) in footerList2" :key="index">
                 <nuxt-link :to="item.link" class="font-medium-14"
                 >{{ item.name }}
                 </nuxt-link
@@ -53,12 +47,12 @@
           >
             <div>
               <v-row justify="center">
-                <v-icon size="32" color="grayScale2">$TwitterIcon</v-icon>
-                <v-icon size="32" class="mx-4">$InstagramIcon</v-icon>
-                <v-icon size="32">$GithubIcon</v-icon>
+                <v-icon size="32" color="gray2">mdi-twitter</v-icon>
+                <v-icon size="32" color="gray2" class="mx-4">mdi-instagram</v-icon>
+                <v-icon size="32" color="gray2">mdi-github</v-icon>
               </v-row>
-              <v-row class="pt-md-2 grayScale3--text font-regular-12">
-<!--                <v-col>{{ // $t('footer.copyRight') }}</v-col>-->
+              <v-row class="pt-md-2 gray3--text font-regular-12">
+                <!--                <v-col>{{ // $t('footer.copyRight') }}</v-col>-->
                 copy right text
               </v-row>
             </div>
@@ -74,15 +68,10 @@ export default {
   name: 'app-footer',
   data() {
     return {
-      // footerList: [
-      //   "Explore",
-      //   "Pricing",
-      //   "API & Docs"
-      // ],
       footerList2: [
-        {name: 'Explore', link: "/explore"},
-        {name: 'Privacy and policy', link: "/privacy-policy"},
-        {name: 'Terms of use', link: "/terms-of-service"},
+        {name: 'لیست سایت ها', link: "/explore"},
+        {name: 'تماس با ما', link: "/privacy-policy"},
+        {name: 'درباره ما', link: "/terms-of-service"},
       ],
     }
   },
@@ -92,8 +81,7 @@ export default {
 </script>
 <style scoped lang="scss">
 .footer-class {
-  background: linear-gradient(68.16deg, #122e47 13.6%, #0c2133 53.43%);
-  border-top: 1px var(--v-grayScale5-base) solid;
+  background: var(--v-secondPrimary-base);
 }
 
 </style>

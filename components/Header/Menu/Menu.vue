@@ -1,16 +1,16 @@
 <template>
   <span class="ms-6 d-none d-md-flex">
     <nuxt-link class="ml-6" to="/explore">
-    <span class="grayScale2--text font-medium-14">لیست سایت ها</span>
+    <span class="secondPrimary--text font-medium-14 link">لیست سایت ها</span>
   </nuxt-link>
   <nuxt-link class="ml-6" to="/explore">
-    <span class="grayScale2--text font-medium-14">تماس با ما</span>
+    <span class="secondPrimary--text font-medium-14 link">تماس با ما</span>
   </nuxt-link>
   <nuxt-link class="ml-6" to="/">
-    <span class="grayScale2--text font-medium-14">درباره ما</span>
+    <span class="secondPrimary--text font-medium-14 link">درباره ما</span>
   </nuxt-link>
   <nuxt-link class="ml-6" to="/">
-    <span class="grayScale2--text font-medium-14">شرایط و قوانین</span>
+    <span class="secondPrimary--text font-medium-14 link">شرایط و قوانین</span>
   </nuxt-link>
 </span>
 
@@ -31,4 +31,12 @@ export default {
 }
 
 </script>
+<style scoped lang="scss">
+.link:hover {
+  color: var(--v-primary-base) !important;
+  border-bottom: 1px solid var(--v-primary-base);
+  padding-bottom: 5px;
+  transition: all 0.3s;
+}
+</style>
 

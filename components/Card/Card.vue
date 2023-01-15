@@ -1,8 +1,6 @@
 <template>
   <v-card
-    :loading="loading"
-    class="mx-auto my-12"
-    max-width="374"
+    class="my-2 mx-2"
   >
     <template slot="progress">
       <v-progress-linear
@@ -13,11 +11,11 @@
     </template>
 
     <v-img
-      height="250"
+      height="180"
       src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
     ></v-img>
 
-    <v-card-title>Cafe Badilico</v-card-title>
+    <v-card-title>سایت اکسکوینو</v-card-title>
 
     <v-card-text>
       <v-row
@@ -38,40 +36,19 @@
         </div>
       </v-row>
 
-      <div class="my-4 text-subtitle-1">
-        $ • Italian, Cafe
-      </div>
-
-      <div>Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating.</div>
+      <div class="mt-6 text-right">بهترین سایت در زمنه ارز های دیجیتال که از تمامی سایت ها بهتر است</div>
     </v-card-text>
 
     <v-divider class="mx-4"></v-divider>
 
-    <v-card-title>Tonight's availability</v-card-title>
-
-    <v-card-text>
-      <v-chip-group
-        v-model="selection"
-        active-class="deep-purple accent-4 white--text"
-        column
-      >
-        <v-chip>5:30PM</v-chip>
-
-        <v-chip>7:30PM</v-chip>
-
-        <v-chip>8:00PM</v-chip>
-
-        <v-chip>9:00PM</v-chip>
-      </v-chip-group>
-    </v-card-text>
+    <v-card-text class="text-right">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرااز</v-card-text>
 
     <v-card-actions>
       <v-btn
-        color="deep-purple lighten-2"
-        text
-        @click="reserve"
+        class="mb-4 mr-2"
+        color="primary"
       >
-        Reserve
+        مشاهده سایت
       </v-btn>
     </v-card-actions>
   </v-card>
@@ -82,20 +59,28 @@ export default {
   name: "Card",
   data() {
     return {
-      loading: false,
       selection: 1,
+      loop: true,
+      navigationEnabled: true,
+      navigationNextLabel: "gdfg",
+      navigationPrevLabel: "fdgdg"
     }
   },
-  methods: {
-    reserve () {
-      this.loading = true
-
-      setTimeout(() => (this.loading = false), 2000)
-    },
-  }
 }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+.carousel-wrapper {
+  padding: 40px;
+  height: 150px;
+.VueCarousel-slide {
+  text-align: center;
+}
+}
+.img-wrapper img {
+  margin: auto;
+  width: 200px;
+  height: 100px;
+  background-image: linear-gradient(gray 100%, transparent 0);
+}
 </style>

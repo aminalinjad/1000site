@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app elevate-on-scroll height="72" class="header-class grayScale8">
+  <v-app-bar app elevate-on-scroll height="72" class="header-class gray1">
     <v-container class="fill-height px-md-3 px-0">
       <v-row align="center" class="mx-0">
         <v-icon
@@ -78,7 +78,7 @@
                       flat
                       outlined
                       hide-details
-                      background-color="grayScale7"
+                      background-color="gray2"
                       height="56"
                       color="primary"
                       class="border-radius-16 search-input"
@@ -283,7 +283,7 @@ export default {
 }
 
 .v-dialog__content {
-  //backdrop-filter: blur(8px)!important;
+  //backdrop-FilterComponents: blur(8px)!important;
   //height:100%!important;
   .overlay-blur {
     backdrop-filter: blur(8px) !important;

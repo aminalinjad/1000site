@@ -54,7 +54,7 @@
                 flat
                 outlined
                 hide-details
-                background-color="grayScale7"
+                background-color="gray2"
                 height="56"
                 color="primary"
                 class="border-radius-16 search-input"
@@ -86,7 +86,7 @@
             </v-col>
             <v-col cols="auto" class="px-1">
               <v-btn
-                color="primaryLight"
+                color="primary"
                 outlined
                 small
                 class="px-1 px-sm-2 border-radius-8"
@@ -95,7 +95,7 @@
             </v-col>
             <v-col cols="auto" class="px-1">
               <v-btn
-                color="primaryLight"
+                color="primary"
                 outlined
                 small
                 class="px-1 px-sm-2 border-radius-8"
@@ -104,7 +104,7 @@
             </v-col>
             <v-col cols="auto" class="ps-1">
               <v-btn
-                color="primaryLight"
+                color="primary"
                 outlined
                 small
                 class="px-1 px-sm-2 border-radius-8"
@@ -121,7 +121,6 @@
 <script >
 export default {
   name: 'home-page-hero',
-  components: {},
   props: [],
   data() {
     return {
@@ -131,7 +130,6 @@ export default {
       graphPermission: false,
     }
   },
-  mounted() {},
   methods: {
     search() {
       if (this.searchValue.length > 400) {
@@ -165,7 +163,7 @@ export default {
     top: 0;
     background: linear-gradient(
         180deg,
-        rgba(0, 0, 0, 0.46) 0%,
+        var(--v-gray1-base),
         rgba(0, 0, 0, 0) 100%
     );
   }
