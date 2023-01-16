@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container fluid class="custom-container">
     <v-row class="all-box">
       <v-btn outlined :key="index" class="each-box border-radius-16 primary--text ml-4" v-for="(item , index) in items">
         <v-icon class="ml-4" size="24"

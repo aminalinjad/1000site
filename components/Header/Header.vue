@@ -283,7 +283,7 @@ export default {
 }
 
 .v-dialog__content {
-  //backdrop-FilterComponents: blur(8px)!important;
+  //backdrop-Filter: blur(8px)!important;
   //height:100%!important;
   .overlay-blur {
     backdrop-filter: blur(8px) !important;
