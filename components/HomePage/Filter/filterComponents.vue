@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="test">
     <h2 class="mb-3">قسمت اول فیلتر</h2>
     <v-expansion-panels
     >
@@ -148,7 +148,7 @@
 
 <script>
 export default {
-  name: "Filter",
+  name: "filter-components",
   data() {
     return {
       selected: []
@@ -158,5 +158,12 @@ export default {
 </script>
 
 <style scoped>
-
+.test {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: yellow;
+  padding: 50px;
+  font-size: 20px;
+}
 </style>

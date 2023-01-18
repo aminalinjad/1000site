@@ -23,6 +23,7 @@
         class="mx-0"
       >
         <v-rating
+          :key="3"
           :value="4.5"
           color="amber"
           dense

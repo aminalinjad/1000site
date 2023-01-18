@@ -1,6 +1,6 @@
 <template>
   <div >
-    <Hero/>
+<!--    <Hero/>-->
     <Category/>
     <v-container fluid class="custom-container">
       <h1 class="title1 my-16">برترین سایت های ایران</h1>
