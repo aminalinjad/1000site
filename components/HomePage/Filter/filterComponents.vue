@@ -158,12 +158,12 @@ export default {
 </script>
 
 <style scoped>
-.test {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  background-color: yellow;
-  padding: 50px;
-  font-size: 20px;
-}
+/*.test {*/
+/*  position: -webkit-sticky;*/
+/*  position: sticky;*/
+/*  top: 0;*/
+/*  background-color: yellow;*/
+/*  padding: 50px;*/
+/*  font-size: 20px;*/
+/*}*/
 </style>
