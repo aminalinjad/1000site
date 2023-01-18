@@ -1,5 +1,5 @@
 <template>
-  <div class="test">
+  <div class="filter-fixed">
     <h2 class="mb-3">قسمت اول فیلتر</h2>
     <v-expansion-panels
     >
@@ -158,12 +158,9 @@ export default {
 </script>
 
 <style scoped>
-/*.test {*/
-/*  position: -webkit-sticky;*/
-/*  position: sticky;*/
-/*  top: 0;*/
-/*  background-color: yellow;*/
-/*  padding: 50px;*/
-/*  font-size: 20px;*/
-/*}*/
+.filter-fixed {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 125px;
+}
 </style>

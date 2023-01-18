@@ -34,19 +34,22 @@
           transition="slide-y-transition"
         >
           <template v-slot:activator="{ on, attrs }">
-            <v-btn
-              outlined
-              width="115"
-              class="text-left px-3 grayScale7 grayScale3--text header-search-btn border-radius-8"
-              v-bind="attrs"
-              v-on="on"
-              height="40"
-            >
+            <div style="transition: all 500ms" :style="{width: `${searchWidth}px`}">
+              <v-btn
+                outlined
+               block
+                class="text-left px-3 grayScale7 grayScale3--text header-search-btn border-radius-8"
+                v-bind="attrs"
+                v-on="on"
+                height="40"
+              >
               <span class="font-medium-12 grayScale3--text">جستجو...</span>
               <v-icon size="20" color="grayScale3" class="ml-auto" right
               >mdi-magnify</v-icon
               >
             </v-btn>
+            </div>
+
           </template>
 
           <!--        search bar-->
@@ -212,9 +215,11 @@ export default {
       baseUrl: process.env.VUE_APP_PANEL_URL,
       selectTabSearch: '',
       graphPermission: false,
+      searchWidth: 110
     }
   },
   mounted() {
+    window.addEventListener("scroll", this.handleScroll);
   },
   computed: {
     menuIcon() {
@@ -231,6 +236,13 @@ export default {
     },
   },
   methods: {
+    handleScroll() {
+      if (window.pageYOffset >= 50) {
+        this.searchWidth = 300
+      } else {
+        this.searchWidth = 110
+      }
+    },
     closeSearchBar() {
       this.openSearchBar = !this.openSearchBar
     },
