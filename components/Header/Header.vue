@@ -36,6 +36,7 @@
           <template v-slot:activator="{ on, attrs }">
             <div style="transition: all 500ms" :style="{width: `${searchWidth}px`}">
               <v-btn
+                v-show="showSearchBox"
                 outlined
                block
                 class="text-left px-3 grayScale7 grayScale3--text header-search-btn border-radius-8"
@@ -53,7 +54,7 @@
           </template>
 
           <!--        search bar-->
-          <v-sheet :height="graphPermission ? 161 : 96" class="grayScale8">
+          <v-sheet height="96" class="grayScale8">
             <v-form @submit.prevent="search" class="fill-height">
               <v-container class="fill-height py-0">
                 <v-row align="center" class="px-3 px-md-0 fill-height">
@@ -215,7 +216,8 @@ export default {
       baseUrl: process.env.VUE_APP_PANEL_URL,
       selectTabSearch: '',
       graphPermission: false,
-      searchWidth: 110
+      searchWidth: 200,
+      showSearchBox: false
     }
   },
   mounted() {
@@ -224,9 +226,6 @@ export default {
   computed: {
     menuIcon() {
       return this.openDrawer ? '$CloseIcon' : '$MenuIcon'
-    },
-    fullName() {
-      return this.userInfo.first_name + ' ' + this.userInfo.last_name
     },
   },
   watch: {
@@ -237,10 +236,11 @@ export default {
   },
   methods: {
     handleScroll() {
-      if (window.pageYOffset >= 50) {
-        this.searchWidth = 300
+      if (window.pageYOffset >= 200) {
+
+        this.showSearchBox = true
       } else {
-        this.searchWidth = 110
+        this.showSearchBox = false
       }
     },
     closeSearchBar() {

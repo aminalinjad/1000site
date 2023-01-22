@@ -143,8 +143,8 @@ export default {
 </script>
 <style scoped lang="scss">
 .home-page-hero {
-  min-height: 600px;
-  height: 600px;
+  min-height: 300px;
+  height: 300px;
   @media (max-width: 960px) {
     min-height: 556px;
     height: 556px;

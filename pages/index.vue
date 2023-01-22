@@ -10,7 +10,7 @@
         <v-col md="3">
           <FilterComponents/>
         </v-col>
-        <v-col md="9">
+        <v-col class="pr-lg-10" md="9">
           <Slider/>
           <v-row class="justify-center d-flex">
             <v-col v-for="i in 12" md="3" :key="i">

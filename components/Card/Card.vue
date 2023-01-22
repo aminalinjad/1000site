@@ -1,6 +1,7 @@
 <template>
   <v-card
-    class="my-2 mx-2"
+    class="my-2 mx-2 border-radius-12"
+    outlined
   >
     <template slot="progress">
       <v-progress-linear
