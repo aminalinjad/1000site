@@ -3,70 +3,46 @@
     class="my-2 mx-2 border-radius-12 every-card"
     outlined
   >
+
     <v-img
       height="180"
+      class="border-radius-12"
       src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
     ></v-img>
-    <v-card-text class="pb-0">
-      <div class="primary--text py-0">کتگوری</div>
-    </v-card-text>
 
-    <v-card-title class="pt-0">سایت اکسکوینو</v-card-title>
+    <v-card-title>سایت اکسکوینو</v-card-title>
 
     <v-card-text>
       <v-row
         align="center"
         class="mx-0"
       >
-        <v-rating
-          :key="3"
-          :value="4.5"
-          color="amber"
-          dense
-          half-increments
-          readonly
-          size="14"
-        ></v-rating>
+        <v-icon color="#d8c518" size="20"
+        >mdi-star
+        </v-icon
+        >
 
-        <div class="grey--text ms-4">
+        <div class="grey--text mx-1">
           4.5 (413)
         </div>
+        <v-icon color="#9691a4" size="20"
+        >mdi-map
+        </v-icon
+        >
+        <div class="grey--text mx-1">
+          خیابان ثانی
+        </div>
+        <v-icon color="#9691a4" size="20"
+        >mdi-phone
+        </v-icon
+        >
+        <div class="grey--text mx-1">
+          09015912178
+        </div>
       </v-row>
 
-      <div class="mt-6 text-right">بهترین سایت در زمنه ارز های دیجیتال که از تمامی سایت ها بهتر است</div>
     </v-card-text>
 
-    <v-divider class="mx-4"></v-divider>
-
-    <v-card-actions>
-      <v-row
-        align="center"
-        class="mx-0 my-2 justify-center"
-      >
-        <v-icon color="#9691a4" size="20"
-        >mdi-car
-        </v-icon
-        >
-
-        <div class="grey--text mx-2">
-          1
-        </div>
-        <v-icon color="#9691a4" size="20"
-        >mdi-bed
-        </v-icon
-        >
-        <div class="grey--text mx-2">
-          2
-        </div>
-        <v-icon color="#9691a4" size="20"
-        >mdi-car
-        </v-icon
-        >
-        <div class="grey--text mx-2">
-          3
-        </div>
-      </v-row>
-    </v-card-actions>
   </v-card>
 </template>
 
@@ -89,9 +65,9 @@ export default {
 .carousel-wrapper {
   padding: 40px;
   height: 150px;
-.VueCarousel-slide {
-  text-align: center;
-}
+  .VueCarousel-slide {
+    text-align: center;
+  }
 }
 .img-wrapper img {
   margin: auto;

@@ -3,7 +3,7 @@
     <client-only>
       <carousel v-bind="options">
         <slide v-for="i in 5" :key="i" class="img-wrapper">
-          <card/>
+          <SliderCard/>
         </slide>
       </carousel>
     </client-only>
@@ -11,9 +11,9 @@
 </template>
 
 <script>
-import Card from "~/components/Card/Card";
+import SliderCard from "~/components/SliderCard/SliderCard";
 export default {
-  components: {Card},
+  components: {SliderCard},
   data() {
     return {
       options: {

@@ -1,9 +1,9 @@
 <template>
   <div >
     <Hero/>
-    <Category/>
+    <Category class="category"/>
     <v-container fluid class="custom-container">
-      <h1 class="title1 my-16">برترین سایت های ایران</h1>
+      <h1 class="title1 my-10">برترین سایت های ایران</h1>
     </v-container>
     <v-container fluid class="custom-container">
       <v-row>
@@ -11,7 +11,7 @@
           <FilterComponents/>
         </v-col>
         <v-col class="pr-lg-10" md="9">
-          <Slider/>
+          <Slider class="mb-4"/>
           <v-row class="justify-center d-flex">
             <v-col v-for="i in 12" md="3" :key="i">
               <card/>
@@ -43,6 +43,12 @@ export default {
 </script>
 <style scoped lang="scss">
 .title1 {
-  font-size: 36px !important;
+  font-size: 32px !important;
+  position: relative;
+  z-index: 9;
+}
+.category {
+  position: relative;
+  z-index: 9;
 }
 </style>
