@@ -23,7 +23,7 @@
             divider=">"
           ></v-breadcrumbs>
           <div class="d-flex justify-space-between">
-            <h1 class="title1">نتایج جستجو</h1>
+            <h1 class="title1">نتایج جستجو "{{$route.query.s}}"</h1>
             <v-btn @click="showMap = true" color="primary" text>
               <v-icon class="ml-1">mdi-map</v-icon>
               نقشه
