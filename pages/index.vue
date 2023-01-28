@@ -49,6 +49,5 @@ export default {
 }
 .category {
   position: relative;
-  z-index: 9;
 }
 </style>

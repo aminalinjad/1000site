@@ -49,18 +49,36 @@
               <v-tab class="text-capitalize font-regular-14">Graph</v-tab>
             </v-tabs>
             <v-form @submit.prevent="search" v-model="valid">
-              <v-text-field
-                placeholder="جستجو در بین هزاران سایت"
-                flat
-                outlined
-                hide-details
-                background-color="gray2"
-                height="56"
-                color="primary"
-                class="border-radius-16 search-input"
-                v-model="searchValue"
-              >
-                <template v-slot:append>
+              <v-row class="position-relative">
+                <v-col cols="7" class="pl-0">
+                  <v-text-field
+                    placeholder="جستجو در بین هزاران سایت"
+                    flat
+                    outlined
+                    hide-details
+                    background-color="gray2"
+                    height="56"
+                    color="primary"
+                    class="search-input"
+                    v-model="searchValue"
+                  >
+                  </v-text-field>
+                </v-col>
+                <v-col cols="5" class="pr-0">
+                  <v-autocomplete
+                    :items="states"
+                    flat
+                    outlined
+                    hide-details
+                    background-color="gray2"
+                    height="56"
+                    color="primary"
+                    class="category-input"
+                    item-text="name"
+                    placeholder="کتگوری"
+
+                  >
+                  </v-autocomplete>
                   <v-btn
                     color="primary"
                     class="px-0 border-radius-16 search-btn"
@@ -76,8 +94,8 @@
                     >جستجو</span
                     >
                   </v-btn>
-                </template>
-              </v-text-field>
+                </v-col>
+              </v-row>
             </v-form>
           </div>
           <v-row v-if="!this.selectTabSearch" align="center" class="mt-1">
@@ -128,6 +146,12 @@ export default {
       valid: false,
       selectTabSearch: '',
       graphPermission: false,
+      states: [
+        { name: 'خانه', abbr: 'FL', id: 1 },
+        { name: 'خرید', abbr: 'GA', id: 2 },
+        { name: 'آشپزخانه', abbr: 'NE', id: 3 },
+        { name: 'غذا', abbr: 'CA', id: 4 },
+      ],
     }
   },
   methods: {
@@ -184,12 +208,21 @@ export default {
       border: none;
     }
     .search-btn {
-      margin-top: -17px;
-      margin-right: -12px;
+      position: absolute;
+     top: 12px;
+      left: 0;
       box-shadow: 0 0 15px 0 rgba(76, 136, 255, 0.4);
     }
     .search-input {
       border: none;
+      border-radius: 0 12px 12px 0;
+      fieldset {
+        border: none;
+      }
+    }
+    .category-input {
+      border: none;
+      border-radius: 12px 0 0 12px;
       fieldset {
         border: none;
       }

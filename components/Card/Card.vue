@@ -74,13 +74,7 @@
 export default {
   name: "Card",
   data() {
-    return {
-      selection: 1,
-      loop: true,
-      navigationEnabled: true,
-      navigationNextLabel: "gdfg",
-      navigationPrevLabel: "fdgdg"
-    }
+    return {}
   },
 }
 </script>

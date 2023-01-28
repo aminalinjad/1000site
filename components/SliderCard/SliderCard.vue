@@ -1,6 +1,6 @@
 <template>
   <v-card
-    class="my-2 mx-2 border-radius-12 every-card"
+    class="my-2 mx-2 border-radius-12 every-card pb-3"
     outlined
   >
 
@@ -49,15 +49,6 @@
 <script>
 export default {
   name: "Card",
-  data() {
-    return {
-      selection: 1,
-      loop: true,
-      navigationEnabled: true,
-      navigationNextLabel: "gdfg",
-      navigationPrevLabel: "fdgdg"
-    }
-  },
 }
 </script>
 
