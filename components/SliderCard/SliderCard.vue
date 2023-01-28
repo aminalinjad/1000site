@@ -67,7 +67,7 @@ export default {
   background-image: linear-gradient(gray 100%, transparent 0);
 }
 .every-card {
-  box-shadow: 0 0.125rem 0.125rem -0.125rem rgb(31 27 45 / 8%), 0 0.25rem 0.75rem rgb(31 27 45 / 8%) !important;
+  //box-shadow: 0 0.125rem 0.125rem -0.125rem rgb(31 27 45 / 8%), 0 0.25rem 0.75rem rgb(31 27 45 / 8%) !important;
   border: unset !important;
 }
 </style>
