@@ -31,25 +31,13 @@ export default {
         {
           name: "پوشاک",
           icon: ""
-        }
-        , {
+        },
+        {
           name: "رمز و ارز دیجیتال",
           icon: ""
         },
         {
-          name: "آشپزی",
-          icon: ""
-        },
-        {
-          name: "خانه",
-          icon: ""
-        },
-        {
-          name: "پوشاک",
-          icon: ""
-        }
-        , {
-          name: "رمز و ارز دیجیتال",
+          name: "مشاهده همه",
           icon: ""
         },
       ],
@@ -61,7 +49,7 @@ export default {
 <style scoped>
 .each-box {
   box-shadow: 0 0.125rem 0.125rem -0.125rem rgb(31 27 45 / 8%), 0 0.25rem 0.75rem rgb(31 27 45 / 8%) !important;
-  height: 64px;
+  height: 55px;
   padding: 8px 8px 8px 24px;
   border-radius: 30px;
   cursor: pointer;

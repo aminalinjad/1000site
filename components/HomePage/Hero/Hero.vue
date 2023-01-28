@@ -98,38 +98,6 @@
               </v-row>
             </v-form>
           </div>
-          <v-row v-if="!this.selectTabSearch" align="center" class="mt-1">
-            <v-col cols="auto" class="pe-1">
-              <span class="font-medium-12 grayScale2--text">معروف ترین ها:</span>
-            </v-col>
-            <v-col cols="auto" class="px-1">
-              <v-btn
-                color="primary"
-                outlined
-                small
-                class="px-1 px-sm-2 border-radius-8"
-              >سایت مثال</v-btn
-              >
-            </v-col>
-            <v-col cols="auto" class="px-1">
-              <v-btn
-                color="primary"
-                outlined
-                small
-                class="px-1 px-sm-2 border-radius-8"
-              >مثال دوم</v-btn
-              >
-            </v-col>
-            <v-col cols="auto" class="ps-1">
-              <v-btn
-                color="primary"
-                outlined
-                small
-                class="px-1 px-sm-2 border-radius-8"
-              >مثال سوم</v-btn
-              >
-            </v-col>
-          </v-row>
         </v-col>
       </v-row>
     </v-container>
