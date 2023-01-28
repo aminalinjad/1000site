@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div class="mb-16 pb-6">
     <Hero/>
     <Category class="category"/>
     <v-container fluid class="custom-container">

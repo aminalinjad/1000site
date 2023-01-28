@@ -1,0 +1,90 @@
+<template>
+  <v-container fluid class="search-custom-container">
+    <v-row class="mt-10">
+      <v-col md="3">
+        <search-filter/>
+      </v-col>
+      <v-col md="9" class="pb-10">
+        <div v-if="showMap" class="map-wrap position-relative">
+          <v-btn @click="showMap = false" class="position-absolute close-icon" icon color="primary">
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+          <client-only>
+            <l-map :zoom=13 :center="[55.9464418,8.1277591]">
+              <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
+              <l-marker :lat-lng="[55.9464418,8.1277591]"></l-marker>
+            </l-map>
+          </client-only>
+        </div>
+        <div v-else>
+          <v-breadcrumbs
+            class="pr-0 pt-0"
+            :items="items"
+            divider=">"
+          ></v-breadcrumbs>
+          <div class="d-flex justify-space-between">
+            <h1 class="title1">نتایج جستجو</h1>
+            <v-btn @click="showMap = true" color="primary" text>
+              <v-icon class="ml-1">mdi-map</v-icon>
+              نقشه
+            </v-btn>
+          </div>
+
+          <v-row class="mt-5">
+            <v-col v-for="(item , index) in 9" md="4" :key="index">
+              <card/>
+            </v-col>
+          </v-row>
+        </div>
+
+      </v-col>
+    </v-row>
+  </v-container>
+</template>
+
+<script>
+import SearchFilter from "@/components/Search/searchFilter";
+import Card from "@/components/Card/Card";
+
+export default {
+  name: "search",
+  components: {Card, SearchFilter},
+  data() {
+    return {
+      showMap: false,
+      items: [
+        {
+          text: 'صفحه اصلی',
+          disabled: false,
+          to: '/',
+        },
+        {
+          text: 'صفحه جستجو',
+          disabled: true,
+          href: '',
+        }
+      ],
+    }
+  }
+}
+</script>
+
+<style scoped lang="scss">
+.map-wrap {
+  height: 600px;
+  min-height: 500px;
+}
+.title1 {
+  font-size: 32px;
+}
+
+.search-custom-container {
+  padding: 0 0 0 100px !important;
+}
+.close-icon {
+  z-index: 9999;
+  top: 10px;
+  right: 10px;
+  background-color: #d8d8d8a3;
+}
+</style>

@@ -26,7 +26,7 @@
 
         </nuxt-link>
         <Menu/>
-        <!--    search btn-->
+        <!--    Search btn-->
         <span class="d-none d-md-inline">
         <v-bottom-sheet
           v-model="openSearchBar"
@@ -53,7 +53,7 @@
 
           </template>
 
-          <!--        search bar-->
+          <!--        Search bar-->
           <v-sheet height="96" class="grayScale8">
             <v-form @submit.prevent="search" class="fill-height">
               <v-container class="fill-height py-0">
@@ -232,13 +232,18 @@ export default {
   data() {
     return {
       openSearchBar: false,
-      searchBarPlaceholder: 'جستجو در بین هزاران سایت',
       searchValue: '',
       baseUrl: process.env.VUE_APP_PANEL_URL,
       selectTabSearch: '',
       graphPermission: false,
       searchWidth: 200,
-      showSearchBox: false
+      showSearchBox: false,
+      states: [
+        { name: 'خانه', abbr: 'FL', id: 1 },
+        { name: 'خرید', abbr: 'GA', id: 2 },
+        { name: 'آشپزخانه', abbr: 'NE', id: 3 },
+        { name: 'غذا', abbr: 'CA', id: 4 },
+      ],
     }
   },
   mounted() {
@@ -284,7 +289,7 @@ export default {
       if (this.searchValue.length > 400) {
         this.searchValue = this.searchValue.slice(0, 400)
       }
-      this.$router.push({path: '/search', query: {s: this.searchValue}})
+      this.$router.push({path: '/Search', query: {s: this.searchValue}})
       this.closeSearchBar()
     },
   },
@@ -359,14 +364,15 @@ export default {
   box-shadow: 0 0 15px 0 rgba(76, 136, 255, 0.4);
 }
 .search-input {
-  border: none;
+  border: 1px solid var(--v-primary-base);
   border-radius: 0 12px 12px 0;
   fieldset {
     border: none;
   }
 }
 .category-input {
-  border: none;
+  border: 1px solid var(--v-primary-base);
+  border-right: unset;
   border-radius: 12px 0 0 12px;
   fieldset {
     border: none;

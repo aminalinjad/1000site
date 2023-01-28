@@ -22,7 +22,7 @@
       :open-drawer="openPanelDrawer"
       @closeNavigationPanel="togglePanelDrawer"
     />
-    <v-main class="grayScale8 mb-16 pb-6">
+    <v-main class="grayScale8">
       <Nuxt />
     </v-main>
     <Footer />

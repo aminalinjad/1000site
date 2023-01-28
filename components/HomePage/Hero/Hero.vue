@@ -56,7 +56,7 @@
                     flat
                     outlined
                     hide-details
-                    background-color="gray2"
+                    background-color="#fff"
                     height="56"
                     color="primary"
                     class="search-input"
@@ -70,7 +70,7 @@
                     flat
                     outlined
                     hide-details
-                    background-color="gray2"
+                    background-color="#fff"
                     height="56"
                     color="primary"
                     class="category-input"
@@ -82,7 +82,7 @@
                   <v-btn
                     color="primary"
                     class="px-0 border-radius-16 search-btn"
-                    height="56"
+                    height="58"
                     :width="$vuetify.breakpoint.mdAndUp? 138:56"
                     min-width="56"
                     @click="search"
@@ -159,7 +159,7 @@ export default {
       if (this.searchValue.length > 400) {
         this.searchValue = this.searchValue.slice(0, 400)
       }
-      this.$router.push({ path: '/search', query: { s: this.searchValue } })
+      this.$router.push({ path: '/Search', query: { s: this.searchValue } })
     },
   },
 }
@@ -214,14 +214,15 @@ export default {
       box-shadow: 0 0 15px 0 rgba(76, 136, 255, 0.4);
     }
     .search-input {
-      border: none;
+      border: 1px solid var(--v-primary-base);
       border-radius: 0 12px 12px 0;
       fieldset {
         border: none;
       }
     }
     .category-input {
-      border: none;
+      border: 1px solid var(--v-primary-base);
+      border-right: unset;
       border-radius: 12px 0 0 12px;
       fieldset {
         border: none;

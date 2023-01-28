@@ -1,7 +1,10 @@
 .v-breadcrumbs {
+  li {
+    margin-left: 8px;
+  }
   &__item {
-    color: var(--v-grayScale3-base)!important;
-    font-family: Poppinsmedium, "Roboto", sans-serif !important;
+    color: var(--v-primary-base)!important;
+
   }
 
   &__item--disabled {

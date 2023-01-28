@@ -81,7 +81,7 @@ export default {
         this.searchValue = this.searchValue.slice(0, 400)
       }
       // SearchService.searchQuery({ s: this.searchValue }).then(() => {
-      //   this.$router.push({ path: '/search', query: { s: this.searchValue } })
+      //   this.$router.push({ path: '/Search', query: { s: this.searchValue } })
       //   this.closeSearchDrawer()
       // })
     },
