@@ -36,7 +36,6 @@
                 :items="sorts"
                 dense
                 flat
-                height="20px"
                 outlined
                 hide-details
                 background-color="#fff"
