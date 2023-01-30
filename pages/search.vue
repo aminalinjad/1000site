@@ -30,11 +30,50 @@
             </v-btn>
           </div>
 
+          <v-row class="align-center mt-3">
+            <v-col cols="2">
+              <v-autocomplete
+                :items="sorts"
+                flat
+                outlined
+                hide-details
+                background-color="#fff"
+                class="sort-input"
+                item-text="name"
+                placeholder="مرتب سازی"
+              >
+              </v-autocomplete>
+            </v-col>
+           <v-col cols="9">
+             <v-divider ></v-divider>
+           </v-col>
+
+             <v-col cols="1">
+               ۱۱۶ نتیجه
+             </v-col>
+          </v-row>
+
           <v-row class="mt-5">
             <v-col v-for="(item , index) in 9" md="4" :key="index">
               <card/>
             </v-col>
           </v-row>
+
+          <div class="text-center">
+            <v-container>
+              <v-row justify="center">
+                <v-col cols="8">
+                  <v-container class="max-width">
+                    <v-pagination
+                      v-model="page"
+                      class="my-4"
+                      :length="15"
+                    ></v-pagination>
+                  </v-container>
+                </v-col>
+              </v-row>
+            </v-container>
+          </div>
         </div>
 
       </v-col>
@@ -52,6 +91,11 @@ export default {
   data() {
     return {
       showMap: false,
+      sorts: [
+        {name: 'گران ترین', abbr: 'FL', id: 1},
+        {name: 'ارزان ترین', abbr: 'GA', id: 2},
+        {name: 'غذا', abbr: 'CA', id: 4},
+      ],
       items: [
         {
           text: 'صفحه اصلی',
@@ -85,5 +129,9 @@ export default {
   top: 10px;
   right: 10px;
   background-color: #d8d8d8a3;
+}
+.sort-input {
+  border: 1px solid #efecf3;
+  border-radius: 12px;
 }
 </style>
