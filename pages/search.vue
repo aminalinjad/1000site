@@ -34,7 +34,9 @@
             <v-col cols="2">
               <v-autocomplete
                 :items="sorts"
+                dense
                 flat
+                height="20px"
                 outlined
                 hide-details
                 background-color="#fff"
