@@ -1,10 +1,10 @@
 <template>
-  <v-container fluid class="search-custom-container">
+  <v-container fluid :class="[showMap ? '' : 'search-custom-container']">
     <v-row class="mt-10">
-      <v-col md="3">
+      <v-col :class="[showMap ? 'px-0 pb-0' : '']" md="3">
         <search-filter/>
       </v-col>
-      <v-col md="9" class="pb-10">
+      <v-col md="9" :class="[showMap ? 'px-0 pb-0' : 'pb-10']">
         <div v-if="showMap" class="map-wrap position-relative">
           <v-btn @click="showMap = false" class="position-absolute close-icon" icon color="primary">
             <v-icon>mdi-close</v-icon>
@@ -71,8 +71,7 @@ export default {
 
 <style scoped lang="scss">
 .map-wrap {
-  height: 600px;
-  min-height: 500px;
+  height: 900px;
 }
 .title1 {
   font-size: 32px;

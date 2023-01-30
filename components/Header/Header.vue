@@ -18,120 +18,24 @@
         >
         <v-spacer class="d-block d-md-none"/>
         <nuxt-link to="/" class="me-2 d-flex align-center">
-                  <v-img
-                    :width="$vuetify.breakpoint.mdAndUp ? 120 : 93"
-                    contain
-                    src="/image/logo.svg"
-                  ></v-img>
+          <v-img
+            :width="$vuetify.breakpoint.mdAndUp ? 120 : 93"
+            contain
+            src="/image/logo.svg"
+          ></v-img>
 
         </nuxt-link>
         <Menu/>
         <!--    Search btn-->
-        <span class="d-none d-md-inline">
-        <v-bottom-sheet
-          v-model="openSearchBar"
-          content-class="search-bar"
-          transition="slide-y-transition"
-        >
-          <template v-slot:activator="{ on, attrs }">
-            <div style="transition: all 500ms" :style="{width: `${searchWidth}px`}">
-              <v-btn
-                v-show="showSearchBox"
-                outlined
-               block
-                class="text-left px-3 grayScale7 grayScale3--text header-search-btn border-radius-8"
-                v-bind="attrs"
-                v-on="on"
-                height="40"
-              >
-              <span class="font-medium-12 grayScale3--text">جستجو...</span>
-              <v-icon size="20" color="grayScale3" class="ml-auto" right
-              >mdi-magnify</v-icon
-              >
-            </v-btn>
-            </div>
-
-          </template>
-
-          <!--        Search bar-->
-          <v-sheet height="96" class="grayScale8">
-            <v-form @submit.prevent="search" class="fill-height">
-              <v-container class="fill-height py-0">
-                <v-row align="center" class="px-3 px-md-0 fill-height">
-                  <!-- After implementing the backend, we can use graph permission  -->
-
-                  <v-col v-if="graphPermission" cols="12" class="pb-2">
-                    <v-tabs
-                      v-model="selectTabSearch"
-                      color="primary"
-                      background-color="transparent"
-                      class="tab-search"
-                      centered
-                    >
-                      <v-tab class="text-capitalize font-regular-14"
-                      >Explore</v-tab
-                      >
-                      <v-tab class="text-capitalize font-regular-14"
-                      >Graph</v-tab
-                      >
-                    </v-tabs>
-                  </v-col>
-                  <v-col cols="12">
-                    <v-row class="position-relative">
-                <v-col cols="7" class="pl-0">
-                  <v-text-field
-                    placeholder="جستجو در بین هزاران سایت"
-                    flat
-                    outlined
-                    hide-details
-                    background-color="gray2"
-                    height="56"
-                    color="primary"
-                    class="search-input"
-                    v-model="searchValue"
-                  >
-                  </v-text-field>
-                </v-col>
-                <v-col cols="5" class="pr-0">
-                  <v-autocomplete
-                    :items="states"
-                    flat
-                    outlined
-                    hide-details
-                    background-color="gray2"
-                    height="56"
-                    color="primary"
-                    class="category-input"
-                    item-text="name"
-                    placeholder="کتگوری"
-
-                  >
-                  </v-autocomplete>
-                  <v-btn
-                    color="primary"
-                    class="px-0 border-radius-16 search-btn"
-                    height="56"
-                    :width="$vuetify.breakpoint.mdAndUp? 138:56"
-                    min-width="56"
-                    @click="search"
-                  >
-                    <v-icon size="25" color="grayScale0">mdi-magnify</v-icon>
-                    <span
-                      class="ms-2 grayScale0--text"
-                      v-if="$vuetify.breakpoint.mdAndUp"
-                    >جستجو</span
-                    >
-                  </v-btn>
-                </v-col>
-              </v-row>
-                  </v-col>
-                </v-row>
-              </v-container>
-            </v-form>
-          </v-sheet>
-        </v-bottom-sheet>
-      </span>
-
+        <v-text-field
+          label="جستجو ..."
+          v-model="searchValue"
+          hide-details
+          v-if="showSearchBox"
+          class="search-input"
+          solo
+          append-icon="mdi-magnify"
+        ></v-text-field>
         <v-spacer/>
         <!--      <span class="d-none d-md-inline" v-if="loadState">-->
         <!--        <span v-if="isAuth">-->
@@ -231,30 +135,37 @@ export default {
   },
   data() {
     return {
-      openSearchBar: false,
       searchValue: '',
       baseUrl: process.env.VUE_APP_PANEL_URL,
-      selectTabSearch: '',
-      graphPermission: false,
-      searchWidth: 200,
-      showSearchBox: false,
-      states: [
-        { name: 'خانه', abbr: 'FL', id: 1 },
-        { name: 'خرید', abbr: 'GA', id: 2 },
-        { name: 'آشپزخانه', abbr: 'NE', id: 3 },
-        { name: 'غذا', abbr: 'CA', id: 4 },
-      ],
+      showSearchBox: false
     }
   },
-  mounted() {
-    window.addEventListener("scroll", this.handleScroll);
-  },
+  // mounted() {
+  //   if (this.$route.name === 'index') {
+  //     window.addEventListener("scroll", this.handleScroll);
+  //   }else {
+  //     this.showSearchBox = true
+  //   }
+  //
+  // },
   computed: {
     menuIcon() {
       return this.openDrawer ? '$CloseIcon' : '$MenuIcon'
     },
   },
   watch: {
+    '$route.name': {
+      handler() {
+        window.removeEventListener('scroll', this.handleScroll)
+        if (this.$route.name === 'index') {
+          window.addEventListener("scroll", this.handleScroll);
+        } else {
+          this.showSearchBox = true
+        }
+      },
+      immediate: true
+
+    },
     openSearchBar() {
       this.searchValue = ''
       this.$emit('changeOverlayStatus')
@@ -263,7 +174,6 @@ export default {
   methods: {
     handleScroll() {
       if (window.pageYOffset >= 200) {
-
         this.showSearchBox = true
       } else {
         this.showSearchBox = false
@@ -297,86 +207,16 @@ export default {
 
 </script>
 <style lang="scss">
-.header-class {
-  z-index: 100 !important;
 
-  .v-btn {
-    &.header-search-btn {
-      .v-btn__content {
-        justify-content: start !important;
-      }
-    }
-  }
-}
 
-.v-app-bar.header-class {
-  border-bottom: 1px var(--v-grayScale6-base) solid !important;
-}
-
-.v-dialog:not(.v-dialog--fullscreen) {
-  //max-height: 100%!important;
-}
-
-.v-dialog__content.overlay-blur {
-}
-
-.v-dialog__content {
-  //backdrop-Filter: blur(8px)!important;
-  //height:100%!important;
-  .overlay-blur {
-    backdrop-filter: blur(8px) !important;
-    height: 100% !important;
-  }
-
-  .search-bar {
-    position: absolute !important;
-    top: 0 !important;
-
-    .v-input {
-      &__slot {
-        &::before,
-        &::after {
-          border-style: none !important;
-        }
-      }
-    }
-  }
-}
-
-.header-menu-class {
-  border-radius: 12px !important;
-}
-
-.tab-search {
-  .v-tab {
-    color: var(--v-grayScale2-base) !important;
-
-    &.v-tab--active {
-      color: var(--v-primary-base) !important;
-    }
-  }
-}
-
-.search-btn {
-  position: absolute;
-  top: 12px;
-  left: 0;
-  box-shadow: 0 0 15px 0 rgba(76, 136, 255, 0.4);
-}
 .search-input {
-  border: 1px solid var(--v-primary-base);
-  border-radius: 0 12px 12px 0;
+  border: 1px solid #d5d2dc;
+  border-radius: 12px;
+
   fieldset {
     border: none;
   }
 }
-.category-input {
-  border: 1px solid var(--v-primary-base);
-  border-right: unset;
-  border-radius: 12px 0 0 12px;
-  fieldset {
-    border: none;
-  }
-}
+
 
 </style>

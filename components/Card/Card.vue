@@ -3,10 +3,20 @@
     class="my-2 mx-2 border-radius-12 every-card"
     outlined
   >
-    <v-img
+    <v-carousel
+      hide-delimiters
       height="180"
-      src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-    ></v-img>
+      show-arrows-on-hover
+    >
+      <v-carousel-item
+        v-for="(slide, i) in 5"
+        :key="i"
+      >
+        <v-img
+          src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+        ></v-img>
+      </v-carousel-item>
+    </v-carousel>
     <v-card-text class="pb-0">
       <div class="primary--text py-0">کتگوری</div>
     </v-card-text>

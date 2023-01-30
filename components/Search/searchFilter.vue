@@ -2,20 +2,25 @@
   <div class="filter-box">
     <v-tabs
       v-model="tabs"
-      class="justify-center d-flex"
+      class="justify-center d-flex mt-6"
     >
       <v-tab
         href="#filter"
-        class="primary--text"
+        class="custom-tab"
       >
         <v-icon>mdi-filter</v-icon>
       </v-tab>
 
       <v-tab
         href="#heart"
-        class="primary--text"
+        class="custom-tab mr-2"
+        tag="button"
       >
-        <v-icon>mdi-heart</v-icon>
+        <div>
+          <v-icon>mdi-heart</v-icon>
+        </div>
+
+
       </v-tab>
     </v-tabs>
 
@@ -111,6 +116,27 @@
                 </v-expansion-panel-content>
               </v-expansion-panel>
             </v-expansion-panels>
+            <h2 class="mb-3">تعداد تخت خواب</h2>
+            <v-btn-toggle
+              v-model="icon"
+              borderless
+            >
+              <v-btn value="left">
+                <span class="hidden-sm-and-down">1</span>
+              </v-btn>
+
+              <v-btn value="center">
+                <span class="hidden-sm-and-down">2</span>
+              </v-btn>
+
+              <v-btn value="right">
+                <span class="hidden-sm-and-down">3</span>
+              </v-btn>
+
+              <v-btn value="justify">
+                <span class="hidden-sm-and-down">4+</span>
+              </v-btn>
+            </v-btn-toggle>
 
             <h2 class="my-3">قسمت دوم فیلتر</h2>
             <v-expansion-panels
@@ -163,9 +189,11 @@
             </v-expansion-panels>
             <h2 class="my-3">قیمت گذاری</h2>
             <v-range-slider
-              hint="قیمت درست انتخاب کنید"
-              max="52"
-              min="-49"
+              track-color="#e2e0e7"
+              height="3"
+              track-fill-color="primary"
+              max="90"
+              min="-50"
             ></v-range-slider>
           </v-card-text>
         </v-card>
@@ -194,11 +222,22 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .filter-box {
   border-top: 1px solid #efecf3 !important;
   border-left: 1px solid #efecf3 !important;
   box-shadow: 0 0.125rem 0.125rem -0.125rem rgb(31 27 45 / 8%), 0 0.25rem 0.75rem rgb(31 27 45 / 8%) !important;
   height: 100%;
+}
+
+.custom-tab {
+  background-color: #f5f4f8 !important;
+  color: #454056 !important;
+  border-radius: .5rem;
+}
+
+.v-tab--active {
+  background-color: #fff !important;
+  color: var(--v-primary-base)!important;
 }
 </style>

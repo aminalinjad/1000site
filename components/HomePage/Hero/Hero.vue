@@ -3,7 +3,7 @@
     <v-container class="fill-height position-relative">
       <v-row align="center">
 
-        <v-col cols="12" md="5" >
+        <v-col cols="12" md="5">
           <v-img
             src="image/hero-image.svg"
             class="hero-image"
@@ -37,66 +37,95 @@
             class="hero-search-container"
             :class="$vuetify.breakpoint.mdAndUp?'mt-9':'mt-8'"
           >
-            <!-- After implementing the backend, we can use graph permission  -->
-            <v-tabs
-              v-model="selectTabSearch"
-              color="primary"
-              background-color="transparent"
-              class="mb-4 tab-search"
-              v-if="graphPermission"
-            >
-              <v-tab class="text-capitalize font-regular-14">Explore</v-tab>
-              <v-tab class="text-capitalize font-regular-14">Graph</v-tab>
-            </v-tabs>
-            <v-form @submit.prevent="search" v-model="valid">
-              <v-row class="position-relative">
-                <v-col cols="7" class="pl-0">
-                  <v-text-field
-                    placeholder="جستجو در بین هزاران سایت"
-                    flat
-                    outlined
-                    hide-details
-                    background-color="#fff"
-                    height="56"
-                    color="primary"
-                    class="search-input"
-                    v-model="searchValue"
-                  >
-                  </v-text-field>
-                </v-col>
-                <v-col cols="5" class="pr-0">
-                  <v-autocomplete
-                    :items="states"
-                    flat
-                    outlined
-                    hide-details
-                    background-color="#fff"
-                    height="56"
-                    color="primary"
-                    class="category-input"
-                    item-text="name"
-                    placeholder="کتگوری"
+              <v-row class="search-box align-center">
+                <v-text-field
+                  placeholder="جستجو در بین هزاران سایت"
+                  solo
+                  flat
+                  hide-details
+                  background-color="#fff"
+                  class="search-input"
+                  v-model="searchValue"
+                >
+                </v-text-field>
+                <v-autocomplete
+                  :items="states"
+                  flat
+                  solo
+                  hide-details
+                  background-color="#fff"
+                  class="category-input"
+                  item-text="name"
+                  placeholder="کتگوری"
 
+                >
+                </v-autocomplete>
+                <v-btn
+                  color="primary"
+                  class="px-0 border-radius-16 search-btn"
+                  :width="$vuetify.breakpoint.mdAndUp? 138:56"
+                  min-width="56"
+                  height="52"
+                  @click="search"
+                >
+                  <v-icon size="25" color="grayScale0">mdi-magnify</v-icon>
+                  <span
+                    class="ms-2 grayScale0--text"
+                    v-if="$vuetify.breakpoint.mdAndUp"
+                  >جستجو</span
                   >
-                  </v-autocomplete>
-                  <v-btn
-                    color="primary"
-                    class="px-0 border-radius-16 search-btn"
-                    height="58"
-                    :width="$vuetify.breakpoint.mdAndUp? 138:56"
-                    min-width="56"
-                    @click="search"
-                  >
-                    <v-icon size="25" color="grayScale0">mdi-magnify</v-icon>
-                    <span
-                      class="ms-2 grayScale0--text"
-                      v-if="$vuetify.breakpoint.mdAndUp"
-                    >جستجو</span
-                    >
-                  </v-btn>
-                </v-col>
+                </v-btn>
               </v-row>
-            </v-form>
+
+            <!--            <v-form @submit.prevent="search" v-model="valid">-->
+            <!--              <v-row class="position-relative">-->
+            <!--                <v-col cols="7" class="pl-0">-->
+            <!--                  <v-text-field-->
+            <!--                    placeholder="جستجو در بین هزاران سایت"-->
+            <!--                    flat-->
+            <!--                    outlined-->
+            <!--                    hide-details-->
+            <!--                    background-color="#fff"-->
+            <!--                    height="56"-->
+            <!--                    color="primary"-->
+            <!--                    class="search-input"-->
+            <!--                    v-model="searchValue"-->
+            <!--                  >-->
+            <!--                  </v-text-field>-->
+            <!--                </v-col>-->
+            <!--                <v-col cols="5" class="pr-0">-->
+            <!--                  <v-autocomplete-->
+            <!--                    :items="states"-->
+            <!--                    flat-->
+            <!--                    outlined-->
+            <!--                    hide-details-->
+            <!--                    background-color="#fff"-->
+            <!--                    height="56"-->
+            <!--                    color="primary"-->
+            <!--                    class="category-input"-->
+            <!--                    item-text="name"-->
+            <!--                    placeholder="کتگوری"-->
+
+            <!--                  >-->
+            <!--                  </v-autocomplete>-->
+            <!--                  <v-btn-->
+            <!--                    color="primary"-->
+            <!--                    class="px-0 border-radius-16 search-btn"-->
+            <!--                    height="58"-->
+            <!--                    :width="$vuetify.breakpoint.mdAndUp? 138:56"-->
+            <!--                    min-width="56"-->
+            <!--                    @click="search"-->
+            <!--                  >-->
+            <!--                    <v-icon size="25" color="grayScale0">mdi-magnify</v-icon>-->
+            <!--                    <span-->
+            <!--                      class="ms-2 grayScale0&#45;&#45;text"-->
+            <!--                      v-if="$vuetify.breakpoint.mdAndUp"-->
+            <!--                    >جستجو</span-->
+            <!--                    >-->
+            <!--                  </v-btn>-->
+            <!--                </v-col>-->
+            <!--              </v-row>-->
+            <!--            </v-form>-->
           </div>
         </v-col>
       </v-row>
@@ -104,7 +133,7 @@
   </section>
 
 </template>
-<script >
+<script>
 export default {
   name: 'home-page-hero',
   props: [],
@@ -115,10 +144,10 @@ export default {
       selectTabSearch: '',
       graphPermission: false,
       states: [
-        { name: 'خانه', abbr: 'FL', id: 1 },
-        { name: 'خرید', abbr: 'GA', id: 2 },
-        { name: 'آشپزخانه', abbr: 'NE', id: 3 },
-        { name: 'غذا', abbr: 'CA', id: 4 },
+        {name: 'خانه', abbr: 'FL', id: 1},
+        {name: 'خرید', abbr: 'GA', id: 2},
+        {name: 'آشپزخانه', abbr: 'NE', id: 3},
+        {name: 'غذا', abbr: 'CA', id: 4},
       ],
     }
   },
@@ -127,7 +156,7 @@ export default {
       if (this.searchValue.length > 400) {
         this.searchValue = this.searchValue.slice(0, 400)
       }
-      this.$router.push({ path: '/Search', query: { s: this.searchValue } })
+      this.$router.push({path: '/Search', query: {s: this.searchValue}})
     },
   },
 }
@@ -145,6 +174,7 @@ export default {
       z-index: 1 !important;
     }
   }
+
   &::before {
     content: '';
     z-index: 0;
@@ -159,43 +189,39 @@ export default {
         rgba(0, 0, 0, 0) 100%
     );
   }
+
   .content-parent {
     z-index: 2;
   }
+
   .hero-search-container {
     max-width: 646px;
-    .tab-search {
-      .v-tab {
-        color: var(--v-grayScale2-base) !important;
-        &.v-tab--active {
-          color: var(--v-primary-base) !important;
-        }
-      }
-    }
+
     .v-text-field--outlined fieldset {
       border: none;
     }
+
     .search-btn {
-      position: absolute;
-     top: 12px;
-      left: 0;
       box-shadow: 0 0 15px 0 rgba(76, 136, 255, 0.4);
+      border-radius: 60px !important;
+      font-weight: bold;
     }
+
     .search-input {
-      border: 1px solid var(--v-primary-base);
-      border-radius: 0 12px 12px 0;
-      fieldset {
-        border: none;
-      }
+      border: none;
+      border-radius: 0;
+      border-left: 1px solid #efecf3;
     }
+
     .category-input {
-      border: 1px solid var(--v-primary-base);
-      border-right: unset;
-      border-radius: 12px 0 0 12px;
-      fieldset {
-        border: none;
-      }
+      border: none;
     }
+  }
+  .search-box {
+    border: 1px solid #efecf3;
+    padding: 7px;
+    border-radius: 60px;
+    box-shadow: 0 0.125rem 0.125rem -0.125rem rgb(31 27 45 / 8%), 0 0.25rem 0.75rem rgb(31 27 45 / 8%);
   }
   .hero-image {
     position: absolute;

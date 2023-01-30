@@ -1,24 +1,24 @@
 <template>
   <div class="filter-fixed">
 
-        <v-tabs
-          v-model="tabs"
-class="justify-center d-flex"
-        >
-          <v-tab
-            href="#filter"
-            class="primary--text"
-          >
-              <v-icon>mdi-filter</v-icon>
-          </v-tab>
+    <v-tabs
+      v-model="tabs"
+      class="justify-center d-flex mt-6"
+    >
+      <v-tab
+        href="#filter"
+        class="custom-tab"
+      >
+        <v-icon>mdi-filter</v-icon>
+      </v-tab>
 
-          <v-tab
-            href="#heart"
-            class="primary--text"
-          >
-            <v-icon>mdi-heart</v-icon>
-          </v-tab>
-        </v-tabs>
+      <v-tab
+        href="#heart"
+        class="custom-tab"
+      >
+        <v-icon>mdi-heart</v-icon>
+      </v-tab>
+    </v-tabs>
 
 
     <v-tabs-items v-model="tabs">
@@ -164,9 +164,11 @@ class="justify-center d-flex"
             </v-expansion-panels>
             <h2 class="my-3">قیمت گذاری</h2>
             <v-range-slider
-              hint="قیمت درست انتخاب کنید"
-              max="52"
-              min="-49"
+              track-color="#e2e0e7"
+              height="3"
+              track-fill-color="primary"
+              max="90"
+              min="-50"
             ></v-range-slider>
           </v-card-text>
         </v-card>
@@ -175,7 +177,8 @@ class="justify-center d-flex"
         value="heart"
         class="mt-6"
       >
-        بهترین سایت در زمنه ارز های دیجیتال که از تمامی سایت ها بهتر استبهترین سایت در زمنه ارز های دیجیتال که از تمامی سایت ها بهتر استبهترین سایت در زمنه ارز های دیجیتال که از تمامی سایت ها بهتر است
+        بهترین سایت در زمنه ارز های دیجیتال که از تمامی سایت ها بهتر استبهترین سایت در زمنه ارز های دیجیتال که از تمامی
+        سایت ها بهتر استبهترین سایت در زمنه ارز های دیجیتال که از تمامی سایت ها بهتر است
       </v-tab-item>
     </v-tabs-items>
   </div>
@@ -194,10 +197,21 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .filter-fixed {
   position: -webkit-sticky;
   position: sticky;
   top: 125px;
+}
+
+.custom-tab {
+  background-color: #f5f4f8 !important;
+  color: #454056 !important;
+  border-radius: .5rem;
+}
+
+.v-tab--active {
+  background-color: #fff !important;
+  color: var(--v-primary-base) !important;
 }
 </style>

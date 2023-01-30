@@ -4,11 +4,20 @@
     outlined
   >
 
-    <v-img
+    <v-carousel
+      hide-delimiters
       height="180"
-      class="border-radius-12"
-      src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-    ></v-img>
+      show-arrows-on-hover
+    >
+      <v-carousel-item
+        v-for="(slide, i) in 5"
+        :key="i"
+      >
+        <v-img
+          src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+        ></v-img>
+      </v-carousel-item>
+    </v-carousel>
 
     <v-card-title>سایت اکسکوینو</v-card-title>
 
