@@ -31,7 +31,6 @@
           label="جستجو ..."
           v-model="searchValue"
           hide-details
-          v-if="showSearchBox"
           class="search-input"
           solo
           append-icon="mdi-magnify"
@@ -140,32 +139,20 @@ export default {
       showSearchBox: false
     }
   },
-  // mounted() {
-  //   if (this.$route.name === 'index') {
-  //     window.addEventListener("scroll", this.handleScroll);
-  //   }else {
-  //     this.showSearchBox = true
-  //   }
-  //
-  // },
+  mounted() {
+    if (this.$route.name === 'index') {
+      window.addEventListener("scroll", this.handleScroll);
+    }else {
+      this.showSearchBox = true
+    }
+
+  },
   computed: {
     menuIcon() {
       return this.openDrawer ? '$CloseIcon' : '$MenuIcon'
     },
   },
   watch: {
-    '$route.name': {
-      handler() {
-        window.removeEventListener('scroll', this.handleScroll)
-        if (this.$route.name === 'index') {
-          window.addEventListener("scroll", this.handleScroll);
-        } else {
-          this.showSearchBox = true
-        }
-      },
-      immediate: true
-
-    },
     openSearchBar() {
       this.searchValue = ''
       this.$emit('changeOverlayStatus')
