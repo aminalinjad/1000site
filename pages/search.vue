@@ -1,10 +1,10 @@
 <template>
   <v-container fluid :class="[showMap ? '' : 'search-custom-container']">
-    <v-row class="mt-10">
-      <v-col :class="[showMap ? 'px-0 pb-0' : '']" md="3">
+    <v-row class="mt-0 mt-md-10">
+      <v-col cols="12" :class="[showMap ? 'px-0 pb-0' : '']" md="3">
         <search-filter/>
       </v-col>
-      <v-col md="9" :class="[showMap ? 'px-0 pb-0' : 'pb-10']">
+      <v-col cols="12" md="9" :class="[showMap ? 'px-0 pb-0' : 'pb-10']">
         <div v-if="showMap" class="map-wrap position-relative">
           <v-btn @click="showMap = false" class="position-absolute close-icon" icon color="primary">
             <v-icon>mdi-close</v-icon>
@@ -31,7 +31,7 @@
           </div>
 
           <v-row class="align-center mt-3">
-            <v-col cols="2">
+            <v-col md="2" cols="5">
               <v-autocomplete
                 :items="sorts"
                 dense
@@ -45,11 +45,11 @@
               >
               </v-autocomplete>
             </v-col>
-           <v-col cols="9">
+           <v-col md="9" cols="4">
              <v-divider ></v-divider>
            </v-col>
 
-             <v-col cols="1">
+             <v-col md="1" cols="3">
                ۱۱۶ نتیجه
              </v-col>
           </v-row>
@@ -134,5 +134,10 @@ export default {
 .sort-input {
   border: 1px solid #efecf3;
   border-radius: 12px;
+}
+@media screen and (max-width: 600px) {
+  .search-custom-container {
+    padding: 0 20px !important;
+  }
 }
 </style>

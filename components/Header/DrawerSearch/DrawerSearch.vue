@@ -21,9 +21,9 @@
               <v-text-field
                 v-model="searchValue"
                 flat
-                outlined
+                solo
                 hide-details
-                background-color="secondPrimary"
+                label="جستجو ..."
                 height="56"
                 color="secondPrimary"
                 class="border-radius-12 search-input"
@@ -39,7 +39,7 @@
                     @click="search"
                     @keyup.enter="search"
                   >
-                    <v-icon size="20" color="grayScale0">$SearchIcon</v-icon>
+                    <v-icon size="20" color="grayScale0">mdi-magnify</v-icon>
                   </v-btn>
                 </template>
               </v-text-field>
@@ -104,8 +104,7 @@ export default {
       min-height: 38px !important;
     }
     .search-btn {
-      margin-top: -8px;
-      margin-right: -12px;
+      margin-left: -12px;
     }
   }
 }

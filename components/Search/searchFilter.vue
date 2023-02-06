@@ -234,6 +234,7 @@ export default {
   background-color: #f5f4f8 !important;
   color: #454056 !important;
   border-radius: .5rem;
+  height: 35px;
 }
 
 .v-tab--active {

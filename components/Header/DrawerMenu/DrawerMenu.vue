@@ -22,16 +22,15 @@
             height="48"
             text
           >
-            <span class="primaryLight--text font-regular-14">Login</span>
+            <span class="primaryLight--text font-regular-14">ورود</span>
           </v-btn>
           <v-btn
-            color="btnColor"
-            dark
+            color="primary"
             :href="`${baseUrl}/auth/register`"
             class="border-radius-8 font-medium-14"
             height="48"
           >
-            <span class="primaryLight--text font-regular-14">Register</span>
+            <span class="font-regular-14">ثبت نام</span>
           </v-btn>
         </v-row>
         <v-divider class="mb-3"></v-divider>
@@ -50,7 +49,7 @@
                 >
               </v-list-item-content>
               <v-list-item-action>
-                <v-icon color="grayScale2" size="12">$ArrowRightIcon</v-icon>
+                <v-icon color="grayScale2" size="12">mdi-arrow-left</v-icon>
               </v-list-item-action>
             </v-list-item>
             <v-divider ></v-divider>
@@ -64,11 +63,11 @@
             >
               <v-list-item-content class="py-6">
                 <v-list-item-title class="font-14 primaryLight--text"
-                > API & Docs</v-list-item-title
+                > درباره ما</v-list-item-title
                 >
               </v-list-item-content>
               <v-list-item-action>
-                <v-icon color="grayScale2" size="12">$ArrowRightIcon</v-icon>
+                <v-icon color="grayScale2" size="12">mdi-arrow-left</v-icon>
               </v-list-item-action>
             </v-list-item>
           </div>
@@ -93,8 +92,8 @@ export default {
       login: false,
       items: [
         {
-          title: 'Explore',
-          link: '/explore',
+          title: 'تماس باما',
+          link: '/contact-us',
         },
       ],
       baseUrl: process.env.VUE_APP_PANEL_URL,
