@@ -9,9 +9,6 @@
   <nuxt-link class="ml-6" to="/">
     <span class="secondPrimary--text font-medium-14 link">درباره ما</span>
   </nuxt-link>
-  <nuxt-link class="ml-6" to="/">
-    <span class="secondPrimary--text font-medium-14 link">شرایط و قوانین</span>
-  </nuxt-link>
 </span>
 
 </template>
