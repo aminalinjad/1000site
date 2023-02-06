@@ -1,16 +1,33 @@
 <template>
   <v-container fluid class="custom-container">
-    <v-row class="all-box justify-center">
-      <div class="d-flex align-center align-content-center each-box ml-4" :key="index" v-for="(item , index) in items">
-        <div class="icon-box ml-4">
-          <v-icon color="#5d3cf2" size="24"
-          >mdi-bed
-          </v-icon
-          >
-        </div>
-        <div class="text">{{ item.name }}</div>
-      </div>
-    </v-row>
+    <v-slide-group
+      show-arrows
+    >
+      <v-slide-item
+        :key="index"
+        v-for="(item , index) in items"
+        v-slot="{ active, toggle }"
+        class="align-center align-content-center each-box ml-4"
+      >
+        <v-btn
+          class="mx-2"
+          color="#fff"
+          height="60"
+          depressed
+          rounded
+          @click="toggle"
+        >
+          <div class="icon-box ml-4">
+            <v-icon color="#5d3cf2" size="24"
+            >mdi-bed
+            </v-icon
+            >
+          </div>
+          <div class="text">{{ item.name }}</div>
+        </v-btn>
+      </v-slide-item>
+    </v-slide-group>
+
   </v-container>
 </template>
 
@@ -47,6 +64,10 @@ export default {
 </script>
 
 <style scoped>
+.all-box {
+  overflow-x: auto;
+  width: 100%;
+}
 .each-box {
   box-shadow: 0 0.125rem 0.125rem -0.125rem rgb(31 27 45 / 8%), 0 0.25rem 0.75rem rgb(31 27 45 / 8%) !important;
   height: 55px;

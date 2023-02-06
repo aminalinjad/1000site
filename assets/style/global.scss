@@ -2,6 +2,13 @@
 body {
   background: var(--v-grayScale7-base);
 }
+.v-dialog {
+  border-radius: 40px !important;
+}
+.v-slide-group__content {
+  padding: 10px;
+  justify-content: center;
+}
 .v-application--wrap {
   background: var(--v-grayScale8-base) !important;
 }
@@ -101,6 +108,11 @@ a {
 @media screen and (min-width: 1300px) {
   .custom-container {
     padding: 0 100px !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .v-main {
+    overflow: hidden !important;
   }
 }
 .VueCarousel-navigation-button[data-v-453ad8cd]:focus {

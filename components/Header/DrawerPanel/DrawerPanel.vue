@@ -11,7 +11,7 @@
         size="24"
         class="mb-5 ml-auto d-flex"
         @click="updateNavigation(false)"
-      >$CloseIcon</v-icon
+      >mdi-close</v-icon
       >
       <v-card class="primary-background-gradiant border-radius-12" flat>
         <v-card-text class="py-3 px-4">
@@ -66,7 +66,7 @@
 
         <v-card class="border-radius-12 grayScale7" flat>
           <v-card-title class="px-4 py-6 justify-end">
-            <v-icon size="15" @click="closeInfoDialog">$close</v-icon>
+            <v-icon size="15" @click="closeInfoDialog">mdi-close</v-icon>
           </v-card-title>
           <v-card-text class="px-4">
             <v-row justify="center">

@@ -38,43 +38,50 @@
             :class="$vuetify.breakpoint.mdAndUp?'mt-9':'mt-8'"
           >
               <v-row class="search-box align-center">
-                <v-text-field
-                  placeholder="جستجو در بین هزاران سایت"
-                  solo
-                  flat
-                  hide-details
-                  background-color="#fff"
-                  class="search-input"
-                  v-model="searchValue"
-                >
-                </v-text-field>
-                <v-autocomplete
-                  :items="states"
-                  flat
-                  solo
-                  hide-details
-                  background-color="#fff"
-                  class="category-input"
-                  item-text="name"
-                  placeholder="کتگوری"
-
-                >
-                </v-autocomplete>
-                <v-btn
-                  color="primary"
-                  class="px-0 border-radius-16 search-btn"
-                  :width="$vuetify.breakpoint.mdAndUp? 138:56"
-                  min-width="56"
-                  height="52"
-                  @click="search"
-                >
-                  <v-icon size="25" color="grayScale0">mdi-magnify</v-icon>
-                  <span
-                    class="ms-2 grayScale0--text"
-                    v-if="$vuetify.breakpoint.mdAndUp"
-                  >جستجو</span
+                <v-col cols="5" class="pa-0">
+                  <v-text-field
+                    placeholder="جستجو در بین هزاران سایت"
+                    solo
+                    flat
+                    hide-details
+                    background-color="#fff"
+                    class="search-input"
+                    v-model="searchValue"
                   >
-                </v-btn>
+                  </v-text-field>
+                </v-col>
+                <v-col md="4" cols="5" class="pa-0">
+                  <v-autocomplete
+                    :items="states"
+                    flat
+                    solo
+                    hide-details
+                    background-color="#fff"
+                    class="category-input"
+                    item-text="name"
+                    placeholder="کتگوری"
+
+                  >
+                  </v-autocomplete>
+                </v-col>
+                <v-col md="3" cols="2" class="pa-0 text-left">
+                  <v-btn
+                    color="primary"
+                    class="px-0 border-radius-16 search-btn"
+                    :width="$vuetify.breakpoint.mdAndUp? 138:56"
+                    min-width="56"
+                    height="52"
+                    @click="search"
+                  >
+                    <v-icon size="25" color="grayScale0">mdi-magnify</v-icon>
+                    <span
+                      class="ms-2 grayScale0--text"
+                      v-if="$vuetify.breakpoint.mdAndUp"
+                    >جستجو</span
+                    >
+                  </v-btn>
+                </v-col>
+
               </v-row>
 
             <!--            <v-form @submit.prevent="search" v-model="valid">-->
@@ -167,8 +174,8 @@ export default {
   min-height: 260px;
   height: 260px;
   @media (max-width: 960px) {
-    min-height: 556px;
-    height: 556px;
+    min-height: 360px;
+    height: 360px;
     &::before {
       height: 100% !important;
       z-index: 1 !important;

@@ -26,6 +26,8 @@
       <Nuxt />
     </v-main>
     <Footer />
+    <Login/>
+    <Register/>
     <v-overlay class="searchOverlay" :value="openSearchBar"></v-overlay>
   </v-app>
 </template>
@@ -36,10 +38,14 @@ import Footer from "../components/Footer/Footer"
 import DrawerPanel from "../components/Header/DrawerPanel/DrawerPanel"
 import DrawerSearch from "../components/Header/DrawerSearch/DrawerSearch"
 import DrawerMenu from "../components/Header/DrawerMenu/DrawerMenu"
+import Login from "../components/Auth/Login";
+import Register from "@/components/Auth/Register";
 
 export default {
   name: 'DefaultLayout',
   components: {
+    Register,
+    Login,
     Header,
     Footer,
     DrawerPanel,

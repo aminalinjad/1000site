@@ -31,81 +31,87 @@
           label="جستجو ..."
           v-model="searchValue"
           hide-details
-          class="search-input"
+          class="search-input d-none d-md-block"
           solo
           append-icon="mdi-magnify"
         ></v-text-field>
         <v-spacer/>
-        <!--      <span class="d-none d-md-inline" v-if="loadState">-->
-        <!--        <span v-if="isAuth">-->
-        <!--          <v-menu-->
-        <!--            offset-y-->
-        <!--            min-width="200"-->
-        <!--            content-class="rounded-lg header-menu-class"-->
-        <!--            v-if="userInfo"-->
-        <!--          >-->
-        <!--            <template v-slot:activator="{ attrs, on }">-->
-        <!--              <v-btn-->
-        <!--                elevation="0"-->
-        <!--                height="40"-->
-        <!--                min-width="170"-->
-        <!--                v-bind="attrs"-->
-        <!--                v-on="on"-->
-        <!--                class="px-2 px-lg-5 grayScale5 border-radius-10"-->
-        <!--              >-->
-        <!--                <v-icon color="primaryLight" size="16" class="me-3"-->
-        <!--                  >$ProfileIcon</v-icon-->
-        <!--                >-->
-        <!--                <span class="font-medium-14 primaryLight&#45;&#45;text"-->
-        <!--                  >{{fullName}}</span-->
-        <!--                >-->
-        <!--                <v-icon color="primaryLight" class="ms-1 ms-lg-3"-->
-        <!--                  >$ArrowBottomIcon</v-icon-->
-        <!--                >-->
-        <!--              </v-btn>-->
-        <!--            </template>-->
-        <!--            <v-list class="py-0 grayScale7">-->
-        <!--              <v-list-item-->
-        <!--                class="py-4"-->
-        <!--                link-->
-        <!--                :href="`${baseUrl}/panel/user-info`"-->
-        <!--              >-->
-        <!--                <v-icon color="primaryLight" class="pa-2 rounded-lg grayScale5"-->
-        <!--                  >$ProfileIcon</v-icon-->
-        <!--                >-->
-        <!--                <span class="ms-3 font-medium-14 primaryLight&#45;&#45;text">-->
-        <!--                  {{ $t('header.profile')}}-->
-        <!--                </span>-->
-        <!--              </v-list-item>-->
-        <!--              <v-divider></v-divider>-->
-        <!--              <v-list-item link @click="logout" class="py-4">-->
-        <!--                <v-icon class="pa-2 rounded-lg grayScale5">$LogoutIcon</v-icon>-->
-        <!--                <span class="ms-3 font-medium-14 primaryLight&#45;&#45;text">-->
-        <!--                  {{ $t('header.logout')}}-->
-        <!--                </span>-->
-        <!--              </v-list-item>-->
-        <!--            </v-list>-->
-        <!--          </v-menu>-->
-        <!--        </span>-->
-        <!--        <span v-else>-->
-        <!--          <a :href="`${baseUrl}/auth/login`">-->
-        <!--            <span class="me-8 font-medium-14 primaryLight&#45;&#45;text">-->
-        <!--              {{ $t('header.login') }}-->
-        <!--            </span>-->
-        <!--          </a>-->
-        <!--          <v-btn-->
-        <!--            width="98"-->
-        <!--            height="40"-->
-        <!--            elevation="0"-->
-        <!--            class="btnColor border-radius-10"-->
-        <!--            :href="`${baseUrl}/auth/register`"-->
-        <!--          >-->
-        <!--            <span class="font-medium-14 primaryLight&#45;&#45;text"-->
-        <!--              >{{ $t('header.register') }}</span-->
-        <!--            >-->
-        <!--          </v-btn>-->
-        <!--        </span>-->
-        <!--      </span>-->
+              <span class="d-none d-md-inline">
+                <span v-if="isAuth">
+                  <v-menu
+                    offset-y
+                    min-width="200"
+                    content-class="rounded-lg header-menu-class"
+                  >
+                    <template v-slot:activator="{ attrs, on }">
+                      <v-btn
+                        elevation="0"
+                        height="40"
+                        min-width="170"
+                        v-bind="attrs"
+                        v-on="on"
+                        class="px-2 px-lg-5 grayScale5 border-radius-10"
+                      >
+                        <v-icon color="primaryLight" size="16" class="me-3"
+                          >$ProfileIcon</v-icon
+                        >
+                        <span class="font-medium-14 primaryLight--text"
+                          >{{fullName}}</span
+                        >
+                        <v-icon color="primaryLight" class="ms-1 ms-lg-3"
+                          >$ArrowBottomIcon</v-icon
+                        >
+                      </v-btn>
+                    </template>
+                    <v-list class="py-0 grayScale7">
+                      <v-list-item
+                        class="py-4"
+                        link
+                        :href="`${baseUrl}/panel/user-info`"
+                      >
+                        <v-icon color="primaryLight" class="pa-2 rounded-lg grayScale5"
+                          >$ProfileIcon</v-icon
+                        >
+                        <span class="ms-3 font-medium-14 primaryLight--text">
+                          پروفایل
+                        </span>
+                      </v-list-item>
+                      <v-divider></v-divider>
+                      <v-list-item link @click="logout" class="py-4">
+                        <v-icon class="pa-2 rounded-lg grayScale5">$LogoutIcon</v-icon>
+                        <span class="ms-3 font-medium-14 primaryLight--text">
+                          خروج
+                        </span>
+                      </v-list-item>
+                    </v-list>
+                  </v-menu>
+                </span>
+                <span v-else>
+                  <v-btn
+                    width="98"
+                    height="40"
+                    elevation="0"
+                    class="border-radius-10"
+                    text
+                    @click="openLoginModal(true)"
+                  >
+                    <span class="font-medium-14 primaryLight--text"
+                    >ورود</span
+                    >
+                  </v-btn>
+                  <v-btn
+                    width="98"
+                    height="40"
+                    elevation="0"
+                    class="border-radius-10"
+                    @click="openRegisterModal(true)"
+                  >
+                    <span class="font-medium-14 primaryLight--text"
+                      >ثبت نام</span
+                    >
+                  </v-btn>
+                </span>
+              </span>
         <v-icon
           color="grayScale0"
           class="hamburger-menu d-flex d-md-none ml-10"
@@ -120,6 +126,7 @@
 </template>
 <script>
 import Menu from "../Header/Menu/Menu"
+import { mapActions } from 'vuex'
 
 export default {
   name: 'app-header',
@@ -136,7 +143,8 @@ export default {
     return {
       searchValue: '',
       baseUrl: process.env.VUE_APP_PANEL_URL,
-      showSearchBox: false
+      showSearchBox: false,
+      isAuth: false
     }
   },
   mounted() {
@@ -149,7 +157,7 @@ export default {
   },
   computed: {
     menuIcon() {
-      return this.openDrawer ? '$CloseIcon' : '$MenuIcon'
+      return this.openDrawer ? 'mdi-close' : 'mdi-menu'
     },
   },
   watch: {
@@ -159,6 +167,10 @@ export default {
     },
   },
   methods: {
+    ...mapActions({
+      openLoginModal: `auth/ACTION_SHOW_LOGIN_MODAL`,
+      openRegisterModal: `auth/ACTION_SHOW_REGISTER_MODAL`,
+    }),
     handleScroll() {
       if (window.pageYOffset >= 200) {
         this.showSearchBox = true

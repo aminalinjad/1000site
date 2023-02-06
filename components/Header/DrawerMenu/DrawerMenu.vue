@@ -11,7 +11,7 @@
         size="24"
         class="mb-3 ml-auto d-flex"
         @click="updateNavigation(false)"
-      >$CloseIcon</v-icon
+      >mdi-close</v-icon
       >
       <div class="fill-height">
         <v-row justify="end" class="mx-0 mt-0 mb-8" v-if="true">
