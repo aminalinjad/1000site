@@ -41,11 +41,12 @@
     }
   }
 }
-
+.custom-solo-text[class~="v-input--is-focused"] .v-input__slot  {
+  box-shadow: 0 0 0 4px rgb(0 132 255 / 50%);
+}
 //hero section
 .search-input {
   input {
     font-size: 14px !important;
   }
-
 }
