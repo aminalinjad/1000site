@@ -56,6 +56,76 @@
           </v-carousel-item>
         </v-carousel>
 
+        <div class="title1 mt-6">اطلاعات</div>
+        <v-row class="mb-4">
+          <v-col md="6">
+            <div class="d-flex mb-3 align-center">
+              <div style="font-size: 18px" class="ml-1">نام:</div>
+              <div class="descriptionText--text">امین علی نژاد</div>
+            </div>
+            <div class="d-flex mb-3 align-center">
+              <div style="font-size: 18px" class="ml-1">نام:</div>
+              <div class="descriptionText--text">امین علی نژاد</div>
+            </div>
+            <div class="d-flex mb-3 align-center">
+              <div style="font-size: 18px" class="ml-1">نام:</div>
+              <div class="descriptionText--text">امین علی نژاد</div>
+            </div>
+            <div class="d-flex mb-3 align-center">
+              <div style="font-size: 18px" class="ml-1">نام:</div>
+              <div class="descriptionText--text">امین علی نژاد</div>
+            </div>
+            <div class="d-flex mb-3 align-center">
+              <div style="font-size: 18px" class="ml-1">نام:</div>
+              <div class="descriptionText--text">امین علی نژاد</div>
+            </div>
+          </v-col>
+
+          <v-col md="6">
+            <div class="d-flex mb-3 align-center">
+              <div style="font-size: 18px" class="ml-1">نام:</div>
+              <div class="descriptionText--text">امین علی نژاد</div>
+            </div>
+            <div class="d-flex mb-3 align-center">
+              <div style="font-size: 18px" class="ml-1">نام:</div>
+              <div class="descriptionText--text">امین علی نژاد</div>
+            </div>
+            <div class="d-flex mb-3 align-center">
+              <div style="font-size: 18px" class="ml-1">نام:</div>
+              <div class="descriptionText--text">امین علی نژاد</div>
+            </div>
+            <div class="d-flex mb-3 align-center">
+              <div style="font-size: 18px" class="ml-1">نام:</div>
+              <div class="descriptionText--text">امین علی نژاد</div>
+            </div>
+            <div class="d-flex mb-3 align-center">
+              <div style="font-size: 18px" class="ml-1">نام:</div>
+              <div class="descriptionText--text">امین علی نژاد</div>
+            </div>
+          </v-col>
+        </v-row>
+
+        <div class="box pa-4 mb-4">
+          <v-row>
+            <v-col class="text-center" md="3">
+              <img src="../../static/image/check.svg" alt="">
+              <div>ضد خش</div>
+            </v-col>
+            <v-col class="text-center" md="3">
+              <img src="../../static/image/check.svg" alt="">
+              <div>ضد خش</div>
+            </v-col>
+            <v-col md="3" class="text-center">
+              <img src="../../static/image/check.svg" alt="">
+              <div>ضد خش</div>
+            </v-col>
+            <v-col md="3" class="text-center">
+              <img src="../../static/image/check.svg" alt="">
+              <div>ضد خش</div>
+            </v-col>
+          </v-row>
+        </div>
+
         <v-expansion-panels class="border-radius-12" accordion>
           <v-expansion-panel
             v-for="(item,i) in 5"
@@ -63,14 +133,222 @@
           >
             <v-expansion-panel-header>مواررد خاص</v-expansion-panel-header>
             <v-expansion-panel-content>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و
+              متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و
+              کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده،
+              شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
+              الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری
+              موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و
+              جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
             </v-expansion-panel-content>
           </v-expansion-panel>
         </v-expansion-panels>
 
         <h2 class="title1 mt-4 mb-2">درباره ما</h2>
-        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
-        <v-divider></v-divider>
+        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون
+          بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع
+          با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
+          متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ
+          پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط
+          سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود
+          طراحی اساسا مورد استفاده قرار گیرد.</p>
+
+        <div class="comment-box">
+          <v-col cols="12">
+            <h2 class="title1 mb-3">نظرات</h2>
+            <v-row class="justify-center align-center text-center">
+              <v-col md="7">
+                <div class="d-flex align-center mb-2">
+                  <div class="d-flex">
+                    5
+                    <v-icon class="ml-2" size="14">mdi-star-outline</v-icon>
+                  </div>
+
+                  <v-progress-linear
+                    v-model="power"
+                    color="amber"
+                    height="16"
+                    class="border-radius-16"
+                  ></v-progress-linear>
+
+                  <div class="mr-3">50%</div>
+                </div>
+                <div class="d-flex align-center mb-2">
+                  <div class="d-flex">
+                    4
+                    <v-icon class="ml-2" size="14">mdi-star-outline</v-icon>
+                  </div>
+
+                  <v-progress-linear
+                    v-model="power"
+                    color="amber"
+                    height="16"
+                    class="border-radius-16"
+                  ></v-progress-linear>
+
+                  <div class="mr-3">50%</div>
+                </div>
+                <div class="d-flex align-center mb-2">
+                  <div class="d-flex">
+                    3
+                    <v-icon class="ml-2" size="14">mdi-star-outline</v-icon>
+                  </div>
+
+                  <v-progress-linear
+                    v-model="power"
+                    color="amber"
+                    height="16"
+                    class="border-radius-16"
+                  ></v-progress-linear>
+
+                  <div class="mr-3">50%</div>
+                </div>
+                <div class="d-flex align-center mb-2">
+                  <div class="d-flex">
+                    2
+                    <v-icon class="ml-2" size="14">mdi-star-outline</v-icon>
+                  </div>
+
+                  <v-progress-linear
+                    :value="40"
+                    color="amber"
+                    height="16"
+                    class="border-radius-16"
+                  ></v-progress-linear>
+
+                  <div class="mr-3">40%</div>
+                </div>
+                <div class="d-flex align-center">
+                  <div class="d-flex">
+                    1
+                    <v-icon class="ml-2" size="14">mdi-star-outline</v-icon>
+                  </div>
+
+                  <v-progress-linear
+                    :value="20"
+                    color="amber"
+                    height="16"
+                    class="border-radius-16"
+                  ></v-progress-linear>
+
+                  <div class="mr-3">20%</div>
+                </div>
+              </v-col>
+
+              <v-col md="5">
+                <div class="title1">4.7</div>
+                <div class="d-flex justify-center align-center">
+                  <v-icon size="16" color="amber">mdi-star</v-icon>
+                  <v-icon size="16" color="amber">mdi-star</v-icon>
+                  <v-icon size="16" color="amber">mdi-star</v-icon>
+                  <v-icon size="16" color="amber">mdi-star</v-icon>
+                  <v-icon size="16" color="amber">mdi-star</v-icon>
+                </div>
+                <div class="gray3--text">۵ نظر</div>
+              </v-col>
+            </v-row>
+
+            <v-row class="justify-space-between mt-8">
+              <v-col cols="9">
+                <v-btn color="primary" class="border-radius-12" outlined>
+                  <v-icon size="16" color="primary">mdi-note-edit-outline</v-icon>
+                  ثبت نظر
+                </v-btn>
+              </v-col>
+              <v-col cols="3">
+                <v-autocomplete
+                  :items="sorts"
+                  dense
+                  flat
+                  outlined
+                  hide-details
+                  background-color="#fff"
+                  class="sort-input border-radius-16"
+                  item-text="name"
+                  placeholder="مرتب سازی"
+                >
+                </v-autocomplete>
+              </v-col>
+            </v-row>
+
+          </v-col>
+        </div>
+        <v-divider class="mb-4"></v-divider>
+        <div class="mb-4">
+          <div class="align-items-start d-flex">
+            <img width="40" height="40" class="avatar me-3 rounded-circle" src="../../static/image/28.png" alt="">
+            <div>
+              <div class="name">امین علی نژاد</div>
+              <div class="d-flex">
+                <v-rating
+                  v-model="rating"
+                  readonly
+                  color="#fdbc31"
+                  class="pa-0"
+                  half-increments
+                  size="18"
+                ></v-rating>
+              </div>
+            </div>
+          </div>
+          <p class="mt-2">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون
+            بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع
+            با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه
+            ا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در
+          </p>
+          <v-divider></v-divider>
+        </div>
+        <div class="mb-4">
+          <div class="align-items-start d-flex">
+            <img width="40" height="40" class="avatar me-3 rounded-circle" src="../../static/image/28.png" alt="">
+            <div>
+              <div class="name">امین علی نژاد</div>
+              <div class="d-flex">
+                <v-rating
+                  v-model="rating"
+                  readonly
+                  color="#fdbc31"
+                  class="pa-0"
+                  half-increments
+                  size="18"
+                ></v-rating>
+              </div>
+            </div>
+          </div>
+          <p class="mt-2">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون
+            بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع
+            با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه
+            ا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در
+          </p>
+          <v-divider></v-divider>
+        </div>
+        <div class="mb-4">
+          <div class="align-items-start d-flex">
+            <img width="40" height="40" class="avatar me-3 rounded-circle" src="../../static/image/28.png" alt="">
+            <div>
+              <div class="name">امین علی نژاد</div>
+              <div class="d-flex">
+                <v-rating
+                  v-model="rating"
+                  readonly
+                  color="#fdbc31"
+                  class="pa-0"
+                  half-increments
+                  size="18"
+                ></v-rating>
+              </div>
+            </div>
+          </div>
+          <p class="mt-2">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون
+            بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع
+            با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه
+            ا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در
+          </p>
+          <v-divider></v-divider>
+        </div>
       </v-col>
       <v-col md="4">
         <div>
@@ -98,7 +376,7 @@
             </div>
 
 
-            </div>
+          </div>
           <div class="mt-4">
             <nuxt-link to="/">بقیه سایت های امین علی نژاد</nuxt-link>
           </div>
@@ -159,7 +437,9 @@
       </v-col>
     </v-row>
 
-    <h3 class="title1 mt-4">موارد مشابه</h3>
+    <v-col cols="12">
+      <h3 class="title1 mt-4">موارد مشابه</h3>
+    </v-col>
     <v-row>
       <v-col v-for="(item, index) in 3" :key="index" md="4">
         <slider-card/>
@@ -179,6 +459,12 @@ export default {
   },
   data() {
     return {
+      power: 78,
+      sorts: [
+        {name: 'گران ترین', abbr: 'FL', id: 1},
+        {name: 'ارزان ترین', abbr: 'GA', id: 2},
+        {name: 'غذا', abbr: 'CA', id: 4},
+      ],
       colors: [
         'primary',
         'secondary',
@@ -237,11 +523,30 @@ export default {
   box-shadow: 0 0.125rem 0.125rem -0.125rem rgb(31 27 45 / 8%), 0 0.25rem 0.75rem rgb(31 27 45 / 8%);
   border-radius: 14px;
 }
+
 .direction-btn {
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
+  width: 120px;
+}
+
+.signup-email-btn {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+}
+
+.signup-email-input {
+  border: 1px solid #efecf3;
+  border-radius: 18px;
+  padding: 0 10px;
+
+}
+
+.sort-input {
+  border: 1px solid #efecf3;
 }
 </style>
