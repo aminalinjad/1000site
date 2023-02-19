@@ -14,7 +14,11 @@
           <Slider class="mb-4"/>
           <v-row class="justify-center d-flex">
             <v-col v-for="i in 12" md="3" :key="i">
-              <card/>
+              <nuxt-link :to="`details/${i}`">
+                <card/>
+              </nuxt-link>
+
+
             </v-col>
           </v-row>
         </v-col>

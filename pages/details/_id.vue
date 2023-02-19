@@ -23,20 +23,24 @@
     <v-divider></v-divider>
     <v-row class="mt-6">
       <v-col md="8">
-        <div class="d-flex justify-space-around align-center py-4">
-          <v-btn
-            variant="text"
-            icon="mdi-minus"
-            @click="model = Math.max(model - 1, 0)"
-          ></v-btn>
-          {{ model }}
-          <v-btn
-            variant="text"
-            icon="mdi-plus"
-            @click="model = Math.min(model + 1, 4)"
-          ></v-btn>
-        </div>
-        <v-carousel v-model="model">
+<!--        <div class="d-flex justify-space-around align-center py-4">-->
+<!--          <v-btn-->
+<!--            variant="text"-->
+<!--            icon="mdi-minus"-->
+<!--            @click="model = Math.max(model - 1, 0)"-->
+<!--          ></v-btn>-->
+<!--          {{ model }}-->
+<!--          <v-btn-->
+<!--            variant="text"-->
+<!--            icon="mdi-plus"-->
+<!--            @click="model = Math.min(model + 1, 4)"-->
+<!--          ></v-btn>-->
+<!--        </div>-->
+        <v-carousel
+          show-arrows-on-hover
+          class="border-radius-16"
+          v-model="model"
+        >
           <v-carousel-item
             v-for="(color, i) in colors"
             :key="color"
