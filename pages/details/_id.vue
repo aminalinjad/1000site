@@ -22,7 +22,7 @@
     </div>
     <v-divider></v-divider>
     <v-row class="mt-6">
-      <v-col md="8">
+      <v-col cols="12" md="8">
 <!--        <div class="d-flex justify-space-around align-center py-4">-->
 <!--          <v-btn-->
 <!--            variant="text"-->
@@ -361,7 +361,7 @@
           <v-divider></v-divider>
         </div>
       </v-col>
-      <v-col md="4">
+      <v-col cols="12" md="4">
         <div>
           <v-btn class="border-radius-12 me-2" depressed color="success">خانه</v-btn>
           <v-btn class="border-radius-12" depressed color="info">فروشگاهی</v-btn>
