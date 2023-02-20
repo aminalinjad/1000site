@@ -60,6 +60,13 @@
           </v-carousel-item>
         </v-carousel>
 
+        <div class="image-box d-flex flex-wrap">
+          <div @click="clickOnSliderImage(item , index)" v-for="(item , index) in colors" :key="index" class="pa-2" style="width: 20%">
+            <img :class="{'active-slider': index === model}" class="border-radius-16 every-image" src="../../static/image/banner.jpg" alt="">
+          </div>
+
+        </div>
+
         <div class="title1 mt-6">اطلاعات</div>
         <v-row class="mb-4">
           <v-col md="6">
@@ -475,6 +482,7 @@ export default {
         'yellow darken-2',
         'red',
         'orange',
+        'yellow'
       ],
       model: 0,
       items: [
@@ -495,6 +503,11 @@ export default {
         }
       ],
       rating: 4.5
+    }
+  },
+  methods: {
+    clickOnSliderImage(item , index){
+      this.model = index
     }
   }
 }
@@ -552,5 +565,21 @@ export default {
 
 .sort-input {
   border: 1px solid #efecf3;
+}
+.every-image {
+  display: block;
+  width: 100%;
+  transition: opacity .2s ease-in-out,border-color .2s ease-in-out;
+  border: 1px solid rgba(0,0,0,0);
+  border-radius: .5rem;
+  opacity: .6;
+  cursor: pointer;
+}
+.every-image:hover {
+  opacity: 1;
+}
+.active-slider {
+  border: 2px solid var(--v-primary-base);
+  opacity: 1;
 }
 </style>
