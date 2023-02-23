@@ -28,6 +28,9 @@
     <Footer />
     <Login/>
     <Register/>
+    <button @click="scrollToTop" :class="{'is-scroll': showTopBtn}" class="top-btn">
+      <v-icon color="#fff">mdi-chevron-up</v-icon>
+    </button>
     <v-overlay class="searchOverlay" :value="openSearchBar"></v-overlay>
   </v-app>
 </template>
@@ -58,9 +61,27 @@ export default {
       openDrawer: false,
       openSearchDrawer: false,
       openPanelDrawer: false,
+      showTopBtn: false
     }
   },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
   methods: {
+    scrollToTop(){
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    },
+    handleScroll() {
+      if (window.pageYOffset >= 500) {
+        this.showTopBtn = true
+      } else {
+        this.showTopBtn = false
+      }
+    },
     changeOverlayStatus() {
       this.openSearchBar = !this.openSearchBar
     },
@@ -81,6 +102,9 @@ export default {
       this.openPanelDrawer = !this.openPanelDrawer
     },
   },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
 }
 </script>
 
@@ -92,5 +116,25 @@ export default {
 }
 .v-overlay--active.searchOverlay {
   backdrop-filter: blur(8px) !important;
+}
+.top-btn {
+  border-radius: 50%;
+  background-color: #1f1b2d40;
+  width: 44px;
+  height: 44px;
+  position: fixed;
+  bottom: 10px;
+  right: -4.125rem;
+  z-index: 999;
+  display: block;
+  transition: right 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55),opacity .3s,background-color .25s ease-in-out;
+  opacity: 0;
+}
+.is-scroll {
+  right: 1.25rem;
+  opacity: 1;
+}
+.top-btn:hover {
+  background-color: #1f1b2d80;
 }
 </style>

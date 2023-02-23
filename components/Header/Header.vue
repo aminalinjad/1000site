@@ -202,6 +202,9 @@ export default {
       this.closeSearchBar()
     },
   },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
 }
 
 </script>
