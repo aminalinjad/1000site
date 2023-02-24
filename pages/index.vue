@@ -1,5 +1,6 @@
 <template>
   <div class="mb-16 pb-6">
+    <event-box/>
     <Hero/>
     <Category class="category"/>
     <v-container fluid class="custom-container">
@@ -33,6 +34,7 @@ import Category from "@/components/HomePage/Category/Category";
 import Card from "@/components/Card/Card";
 import Slider from "@/components/HomePage/Slider/Slider";
 import FilterComponents from "@/components/HomePage/Filter/filterComponents";
+import eventBox from "../components/HomePage/EventBox/eventBox";
 
 export default {
   name: 'IndexPage',
@@ -41,7 +43,8 @@ export default {
     Slider,
     Card,
     Category,
-    Hero
+    Hero,
+    eventBox
   }
 }
 </script>

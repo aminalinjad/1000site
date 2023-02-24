@@ -123,7 +123,7 @@ export default {
   width: 44px;
   height: 44px;
   position: fixed;
-  bottom: 10px;
+  bottom: 15px;
   right: -4.125rem;
   z-index: 999;
   display: block;
