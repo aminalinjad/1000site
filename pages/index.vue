@@ -28,6 +28,7 @@
       <event-box/>
 
       <similar-blog/>
+      <app-box/>
     </v-container>
   </div>
 </template>
@@ -40,10 +41,12 @@ import Slider from "@/components/HomePage/Slider/Slider";
 import FilterComponents from "@/components/HomePage/Filter/filterComponents";
 import eventBox from "../components/HomePage/EventBox/eventBox";
 import SimilarBlog from "@/components/SimilarBlog/similarBlog";
+import AppBox from "@/components/HomePage/AppBox/appBox";
 
 export default {
   name: 'IndexPage',
   components: {
+    AppBox,
     SimilarBlog,
     FilterComponents,
     Slider,
