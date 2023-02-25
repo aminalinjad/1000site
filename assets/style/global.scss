@@ -149,3 +149,20 @@ a {
 .v-rating--readonly .v-icon {
   padding: 0 !important;
 }
+button.hooper-indicator {
+  width: 1rem;
+  height: .375rem;
+  margin: 0.3rem;
+  padding: 0;
+  transition: width .2s ease-in-out, background-color .2s ease-in-out;
+  background-color: #66627666;
+}
+button.hooper-indicator:hover {
+  background: #66627666;
+}
+
+button.hooper-indicator.is-active {
+  background-color: #666276;
+  height: .375rem;
+  width: 2rem;
+}

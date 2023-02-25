@@ -1,6 +1,5 @@
 <template>
   <div class="mb-16 pb-6">
-    <event-box/>
     <Hero/>
     <Category class="category"/>
     <v-container fluid class="custom-container">
@@ -24,6 +23,11 @@
           </v-row>
         </v-col>
       </v-row>
+
+      <h2 class="title1 mt-10 mb-4">ایونت های جدید تهران</h2>
+      <event-box/>
+
+      <similar-blog/>
     </v-container>
   </div>
 </template>
@@ -35,10 +39,12 @@ import Card from "@/components/Card/Card";
 import Slider from "@/components/HomePage/Slider/Slider";
 import FilterComponents from "@/components/HomePage/Filter/filterComponents";
 import eventBox from "../components/HomePage/EventBox/eventBox";
+import SimilarBlog from "@/components/SimilarBlog/similarBlog";
 
 export default {
   name: 'IndexPage',
   components: {
+    SimilarBlog,
     FilterComponents,
     Slider,
     Card,
@@ -57,4 +63,5 @@ export default {
 .category {
   position: relative;
 }
+
 </style>

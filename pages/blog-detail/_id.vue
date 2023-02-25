@@ -135,26 +135,15 @@
         </div>
       </v-col>
     </v-row>
-    <div class="d-flex justify-space-between mb-2 mt-4">
-      <div class="box-title">شاید به این موارد هم علاقه مند باشید</div>
-      <a href="">
-        رفتن به صفحه بلاگ
-        <v-icon>mdi-arrow-left</v-icon>
-      </a>
-    </div>
-    <v-row>
-      <v-col v-for="(item, index) in 3" :key="index" md="4">
-        <slider-card/>
-      </v-col>
-    </v-row>
+    <similar-blog/>
   </v-container>
 </template>
 
 <script>
-import SliderCard from "../../components/SliderCard/SliderCard";
+import SimilarBlog from "@/components/SimilarBlog/similarBlog";
 export default {
   name: "blog-detail",
-  components: {SliderCard},
+  components: {SimilarBlog},
   data() {
     return {
       items: [
@@ -207,11 +196,6 @@ export default {
 
 .description {
   font-size: 16px;
-}
-
-.box-title {
-  font-size: 20px;
-  font-weight: bold;
 }
 
 .each-category {
