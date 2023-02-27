@@ -8,20 +8,21 @@
       </a>
     </div>
     <v-row>
-      <v-col v-for="(item, index) in 3" :key="index" md="4">
-        <slider-card/>
+      <v-col v-for="(item, index) in 4" :key="index" md="3" cols="12">
+        <blog-card/>
       </v-col>
     </v-row>
   </div>
 </template>
 
 <script>
-import SliderCard from "@/components/SliderCard/SliderCard";
 
+
+import BlogCard from "@/components/SimilarBlog/BlogCard";
 export default {
   name: "similarBlog",
   components: {
-    SliderCard
+    BlogCard,
   }
 }
 </script>

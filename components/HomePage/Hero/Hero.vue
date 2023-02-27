@@ -1,17 +1,7 @@
 <template>
-  <section class="home-page-hero position-relative mx-n1 mx-md-0 mb-n12 mb-sm-0">
+  <section class="home-page-hero position-relative mx-n1 mx-md-0 mb-n12 mb-sm-0 mt-md-10 mt-0">
     <v-container class="fill-height position-relative">
       <v-row align="center">
-
-        <v-col cols="12" md="5">
-          <v-img
-            src="image/hero-image.svg"
-            class="hero-image"
-            :width="$vuetify.breakpoint.mdAndUp?886:'100%'"
-            :height="$vuetify.breakpoint.mdAndUp ? '739' : '545'"
-            :contain="$vuetify.breakpoint.mdAndUp"
-          ></v-img>
-        </v-col>
         <v-col
           cols="12"
           md="7"
@@ -37,52 +27,52 @@
             class="hero-search-container"
             :class="$vuetify.breakpoint.mdAndUp?'mt-9':'mt-8'"
           >
-              <v-row class="search-box align-center">
-                <v-col cols="5" class="pa-0">
-                  <v-text-field
-                    placeholder="جستجو در بین هزاران سایت"
-                    solo
-                    flat
-                    hide-details
-                    background-color="#fff"
-                    class="search-input"
-                    v-model="searchValue"
-                  >
-                  </v-text-field>
-                </v-col>
-                <v-col md="4" cols="5" class="pa-0">
-                  <v-autocomplete
-                    :items="states"
-                    flat
-                    solo
-                    hide-details
-                    background-color="#fff"
-                    class="category-input"
-                    item-text="name"
-                    placeholder="کتگوری"
+            <v-row class="search-box align-center">
+              <v-col cols="5" class="pa-0">
+                <v-text-field
+                  placeholder="جستجو در بین هزاران سایت"
+                  solo
+                  flat
+                  hide-details
+                  background-color="#fff"
+                  class="search-input"
+                  v-model="searchValue"
+                >
+                </v-text-field>
+              </v-col>
+              <v-col md="4" cols="5" class="pa-0">
+                <v-autocomplete
+                  :items="states"
+                  flat
+                  solo
+                  hide-details
+                  background-color="#fff"
+                  class="category-input"
+                  item-text="name"
+                  placeholder="کتگوری"
 
+                >
+                </v-autocomplete>
+              </v-col>
+              <v-col md="3" cols="2" class="pa-0 text-left">
+                <v-btn
+                  color="primary"
+                  class="px-0 border-radius-16 search-btn"
+                  :width="$vuetify.breakpoint.mdAndUp? 138:56"
+                  min-width="56"
+                  height="52"
+                  @click="search"
+                >
+                  <v-icon size="25" color="grayScale0">mdi-magnify</v-icon>
+                  <span
+                    class="ms-2 grayScale0--text"
+                    v-if="$vuetify.breakpoint.mdAndUp"
+                  >جستجو</span
                   >
-                  </v-autocomplete>
-                </v-col>
-                <v-col md="3" cols="2" class="pa-0 text-left">
-                  <v-btn
-                    color="primary"
-                    class="px-0 border-radius-16 search-btn"
-                    :width="$vuetify.breakpoint.mdAndUp? 138:56"
-                    min-width="56"
-                    height="52"
-                    @click="search"
-                  >
-                    <v-icon size="25" color="grayScale0">mdi-magnify</v-icon>
-                    <span
-                      class="ms-2 grayScale0--text"
-                      v-if="$vuetify.breakpoint.mdAndUp"
-                    >جستجو</span
-                    >
-                  </v-btn>
-                </v-col>
+                </v-btn>
+              </v-col>
 
-              </v-row>
+            </v-row>
 
             <!--            <v-form @submit.prevent="search" v-model="valid">-->
             <!--              <v-row class="position-relative">-->
@@ -135,6 +125,16 @@
             <!--            </v-form>-->
           </div>
         </v-col>
+        <v-col cols="12" md="5">
+          <v-img
+            src="image/hero-image.jpg"
+            class="hero-image border-radius-16 d-none d-md-block"
+            :width="$vuetify.breakpoint.mdAndUp?886:'100%'"
+
+            :contain="$vuetify.breakpoint.mdAndUp"
+          ></v-img>
+        </v-col>
+
       </v-row>
     </v-container>
   </section>
@@ -171,11 +171,11 @@ export default {
 </script>
 <style scoped lang="scss">
 .home-page-hero {
-  min-height: 260px;
-  height: 260px;
+  min-height: 280px;
+  height: 280px;
   @media (max-width: 960px) {
-    min-height: 360px;
-    height: 360px;
+    min-height: 220px;
+    height: 220px;
     &::before {
       height: 100% !important;
       z-index: 1 !important;
@@ -231,18 +231,18 @@ export default {
     box-shadow: 0 0.125rem 0.125rem -0.125rem rgb(31 27 45 / 8%), 0 0.25rem 0.75rem rgb(31 27 45 / 8%);
   }
   .hero-image {
-    position: absolute;
-    right: -25%;
-    top: 0;
+    //position: absolute;
+    //right: -25%;
+    //top: 0;
     @media (max-width: 600px) {
-      right: -13%;
-      top: -10%;
-      transform: scaleX(-1) rotate(19deg);
+      //right: -13%;
+      //top: -10%;
+      //transform: scaleX(-1) rotate(19deg);
     }
     @media (max-width: 960px) and (min-width: 600px) {
-      right: 0;
-      top: 0;
-      transform: scaleX(-1);
+      //right: 0;
+      //top: 0;
+      //transform: scaleX(-1);
     }
   }
 }

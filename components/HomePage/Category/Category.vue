@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="custom-container">
+  <v-container fluid class="custom-container mt-md-16 mt-0">
     <v-slide-group
       show-arrows
     >

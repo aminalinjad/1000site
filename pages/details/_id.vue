@@ -68,6 +68,16 @@
                    src="../../static/image/banner.jpg" alt="">
             </div>
 
+            <div @click="dialog = true" class="pa-2 align-stretch d-flex"
+                 style="width: 20%">
+              <div style="background-color: #757575" class="border-radius-16 every-image text-center d-flex align-center justify-center">
+                <div>
+                  <v-icon size="40">mdi-play-circle-outline</v-icon>
+                  <div>پخش کردن ویدیو</div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 
@@ -450,6 +460,34 @@
       </v-col>
     </v-row>
 
+
+    <!--    dialog for video-->
+    <v-dialog
+      content-class="border-radius-0"
+      style="border-radius: 0"
+      v-model="dialog"
+      fullscreen
+      :scrim="false"
+      transition=""
+    >
+      <v-card>
+        <v-btn
+          icon
+          dark
+          @click="dialog = false"
+        >
+          <v-icon class="primary--text">mdi-close</v-icon>
+        </v-btn>
+        <div class="d-flex align-center justify-center mt-15">
+          <video width="40%" controls>
+            <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
+            <source src="https://www.w3schools.com/tags/movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+      </v-card>
+    </v-dialog>
   </v-container>
 </template>
 
@@ -463,6 +501,7 @@ export default {
   },
   data() {
     return {
+      dialog: false,
       power: 78,
       sorts: [
         {name: 'گران ترین', abbr: 'FL', id: 1},
