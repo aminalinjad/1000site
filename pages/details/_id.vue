@@ -470,7 +470,7 @@
       :scrim="false"
       transition=""
     >
-      <v-card>
+      <div class="white">
         <v-btn
           icon
           dark
@@ -478,8 +478,12 @@
         >
           <v-icon class="primary--text">mdi-close</v-icon>
         </v-btn>
+      </div>
+
+      <v-card class="d-flex justify-center align-center">
+
         <div class="d-flex align-center justify-center mt-15">
-          <video width="40%" controls>
+          <video controls>
             <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
             <source src="https://www.w3schools.com/tags/movie.ogg" type="video/ogg">
             Your browser does not support the video tag.
