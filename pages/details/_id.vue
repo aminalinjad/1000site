@@ -470,20 +470,20 @@
       :scrim="false"
       transition=""
     >
-      <div class="white">
         <v-btn
+          style="z-index: 99;right: 20px;top: 20px"
+          class="position-absolute"
           icon
           dark
           @click="dialog = false"
         >
           <v-icon class="primary--text">mdi-close</v-icon>
         </v-btn>
-      </div>
 
       <v-card class="d-flex justify-center align-center">
 
         <div class="d-flex align-center justify-center mt-15">
-          <video controls>
+          <video width="100%" height="600" controls class="border-radius-16">
             <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
             <source src="https://www.w3schools.com/tags/movie.ogg" type="video/ogg">
             Your browser does not support the video tag.
