@@ -15,12 +15,12 @@
         :key="i"
       >
         <div class="description-data position-absolute">
-          <v-icon>mdi-calender</v-icon>
+          <v-icon size="18">mdi-calendar</v-icon>
           <span>19 فروردین</span>
         </div>
-        <div class="description-data position-absolute">
-          <v-icon>mdi-calender</v-icon>
-          <span>19 فروردین</span>
+        <div class="description-data2 position-absolute">
+          <v-icon size="18">mdi-message</v-icon>
+          <span>19</span>
         </div>
         <v-img
           src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
@@ -98,5 +98,14 @@ export default {
   background-color: rgba(253, 96, 62, 0.64);
   padding: 1px 6px;
   z-index: 9;
+  color: #2f2f2f;
+}
+.description-data2 {
+  bottom: 0;
+  left: 0;
+  background-color: rgba(253, 96, 62, 0.64);
+  padding: 1px 6px;
+  z-index: 9;
+  color: #2f2f2f;
 }
 </style>

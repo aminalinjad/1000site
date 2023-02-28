@@ -24,6 +24,8 @@
         </v-col>
       </v-row>
 
+      <div class=""></div>
+
       <h2 class="title1 mt-10 mb-4">ایونت های جدید تهران</h2>
       <event-box/>
 
