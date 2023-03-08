@@ -169,9 +169,6 @@ export default {
 </script>
 
 <style scoped>
-.title1 {
-  font-size: 28px;
-}
 
 .blog-image {
   width: 100%;

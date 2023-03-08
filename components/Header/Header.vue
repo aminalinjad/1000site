@@ -209,7 +209,9 @@ export default {
 
 </script>
 <style lang="scss">
-
+.header-class {
+  z-index: 999 !important;
+}
 
 .search-input {
   border: 1px solid #d5d2dc;

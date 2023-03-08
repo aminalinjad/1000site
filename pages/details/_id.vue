@@ -557,9 +557,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.title1 {
-  font-size: 26px;
-}
 
 .custom-btn {
   border: unset;

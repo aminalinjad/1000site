@@ -118,9 +118,6 @@ export default {
 .map-wrap {
   height: 900px;
 }
-.title1 {
-  font-size: 32px;
-}
 
 .search-custom-container {
   padding: 0 0 0 100px !important;
